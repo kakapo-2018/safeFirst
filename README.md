@@ -1,6 +1,58 @@
 # Lost and Found
+## Team
 
-## Week 7 Large group project
+Back end team
+* Marie (architecture)
+* Winston
+* Zane
+* Rob
+
+Front end team
+*  Kyoko (architecture)
+*  Nat
+*  Cam
+*  Richard (timekeeper)
+*  Welli
+
+Timekeeper
+* Richard
+
+Architecture
+* Marie
+* Kyoko
+* Matt
+
+Gitmasters (send pull requests to these people for approval)
+* Ross 
+* Engie
+* Kelly
+
+## Timeline
+
+Thursday
+10.10am - 11.30am - Planning sprint 1
+11.45am - 12.00pm - Standup / retro / planning 
+12.00pm -2.00pm lunch
+2.00pm - 4.30pm Sprint 2
+4.30pm - 5.00pm - Standup / retro / planning 
+5.00pm onwards - continued work on isolated branches 
+
+Friday
+9.00am - 9.15am - Standup 
+9.15am -11.45am - Sprint 3
+11.45am - 12.00pm - Standup / retro / planning 
+12.00pm -4.00pm - Sprint 4 take lunch when you need :)
+4.00pm - presentation 
+5.00pm celebration
+
+## Front end tasks
+  | 1 | --- |
+  | 2 | --- |
+  
+## Back end tasks
+  | 1 | --- |
+  | 2 | --- |
+
 
 The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
 
