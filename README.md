@@ -31,7 +31,7 @@ Gitmasters (send pull requests to these people for approval)
 
 #Thursday
 * 10.10am - 11.30am - Planning sprint 1
-* 11.45am - 12.00pm - Standup / retro / planning 
+* 11.30am - 12.00pm - Standup / retro / planning 
 * 12.00pm -2.00pm lunch
 * 2.00pm - 4.30pm Sprint 2
 * 4.30pm - 5.00pm - Standup / retro / planning 
