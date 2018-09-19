@@ -52,10 +52,10 @@ Gitmasters (send pull requests to these people for approval)
   | 2 | a |
   
 ## Back end tasks
-* 1 DB Table list
-* 2 DB Table found
+* 1 DB Table lost 
+* 2 DB Table found  done!
 * 3 Make seed lost
-* 4 Make seed found 
+* 4 Make seed found done !
 * 5 Server API Lost create row in lost db (need to be logged in) 
 * 6 Server API Post found create row in found db
 * 7 Server API Post register create row in users db 
