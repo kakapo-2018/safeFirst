@@ -45,14 +45,17 @@ Friday
 4.00pm - presentation 
 5.00pm celebration
 
+ ---
+
 ## Front end tasks
-  | 1 | --- |
-  | 2 | --- |
+  | 1 | a |
+  | 2 | a |
   
 ## Back end tasks
-  | 1 | --- |
-  | 2 | --- |
+  | 1 | a |
+  | 2 | a|
 
+ ---
 
 The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
 
