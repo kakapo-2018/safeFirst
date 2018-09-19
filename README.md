@@ -29,21 +29,21 @@ Gitmasters (send pull requests to these people for approval)
 
 ## Timeline
 
-Thursday
-10.10am - 11.30am - Planning sprint 1
-11.45am - 12.00pm - Standup / retro / planning 
-12.00pm -2.00pm lunch
-2.00pm - 4.30pm Sprint 2
-4.30pm - 5.00pm - Standup / retro / planning 
-5.00pm onwards - continued work on isolated branches 
+#Thursday
+* 10.10am - 11.30am - Planning sprint 1
+* 11.45am - 12.00pm - Standup / retro / planning 
+* 12.00pm -2.00pm lunch
+* 2.00pm - 4.30pm Sprint 2
+* 4.30pm - 5.00pm - Standup / retro / planning 
+* 5.00pm onwards - continued work on isolated branches 
 
-Friday
-9.00am - 9.15am - Standup 
-9.15am -11.45am - Sprint 3
-11.45am - 12.00pm - Standup / retro / planning 
-12.00pm -4.00pm - Sprint 4 take lunch when you need :)
-4.00pm - presentation 
-5.00pm celebration
+#Friday
+* 9.00am - 9.15am - Standup 
+* 9.15am -11.45am - Sprint 3
+* 11.45am - 12.00pm - Standup / retro / planning 
+* 12.00pm -4.00pm - Sprint 4 take lunch when you need :)
+* 4.00pm - presentation 
+* 5.00pm celebration
 
  ---
 
