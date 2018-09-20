@@ -1,21 +1,11 @@
-import {getLost} from '../utils/api'
 
-
-const initialState = {
-    getLost: getLost()
-}
-
-export default function lostPets (state = initialState, action) {
+export default function lostPets (state = [], action) {
     switch (action.type) {
         case 'RECEIVE_LOST_PETS':
-        return {
-            lostAnimals: [...state, null]
-        }
+            return action.lostPets        
         case 'ADD_LOST_PET':
-        return {
-            lostAnimals: [...state, action.payload]
-        }
+            return [...state, action.payload]
         default:
-        return state
+            return state
     }
 }

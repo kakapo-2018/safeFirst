@@ -1,7 +1,7 @@
-
-export function fetchFoundPets () {
+export function fetchFoundPets (foundPets) {
     return {
         type: 'RECEIVE_FOUND_PETS',
+        foundPets
     }
 }
 
@@ -19,14 +19,15 @@ export function addFoundPet () {
 
 
 export default function getFound () {
-    return request 
-    .get('/api/found')
-    .then (res => {
-      const foundAnimals = res.body
-      return foundAnimals
-    })
-    .catch(() => {
-      throw Error('You need to implement an API route for /api/found')
-    })
-  }
-  
+    return (dispatch) => {
+        request
+        .get('/api/found')
+        .end((err, res) => {
+            if (err) {
+              console.error(err.message)
+              return
+            }
+            dispatch(fetchFoundPets(res.body))
+          })
+      }
+    }
