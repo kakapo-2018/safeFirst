@@ -1,6 +1,6 @@
 var router = require('express').Router()
 
-var {getFoundDB, foundExists, createFound} = require('../db/found')
+var {getFoundDB, createFound} = require('../db/found')
 
 router.post('/', postFound)
 
@@ -20,15 +20,8 @@ function postFound (req, res, next) {
 
 
 getFound = (req, res, next) => {
-    // const id = req.body.id
-    // const species = req.body.species
-    // const photo = req.body.photo
-    // const user_id = req.body.user_id
-    
-    // const newLost = {species, photo, user_id}
     getFoundDB()
     .then(animal => {
-        console.log(animal)
         res.json(animal)
     })
     .catch(err => res.status(500).send({message: "Server Error 2"}))
