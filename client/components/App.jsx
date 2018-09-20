@@ -5,6 +5,9 @@ import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
+import Upload from './Upload'
+import List from './List'
+//import Header from './Header'
 
 
 const App = ({auth}) => (
@@ -18,7 +21,8 @@ const App = ({auth}) => (
           </Link>
           <Nav />
         </div>
-      </div>
+      </div> 
+
 
       <div className=''>
         {!auth.isAuthenticated &&
@@ -26,6 +30,8 @@ const App = ({auth}) => (
         }
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/upload" component={Upload} />
+        <Route path="/list" component={List} />
       </div>
 
     </div>
