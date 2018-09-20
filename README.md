@@ -70,7 +70,29 @@ Route : / API/LOST
 
 (body)- - an array of objects
 ```sh
-TO COME
+[
+    {
+        "id": 1,
+        "name": "Rodger",
+        "species": "Cat",
+        "photo": "https://picsum.photos/200/300",
+        "user_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Topsy",
+        "species": "Dog",
+        "photo": "https://picsum.photos/100/200",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Raster",
+        "species": "Hedgehog",
+        "photo": "https://picsum.photos/60/30",
+        "user_id": 3
+    }
+]
 ```
 
 Method : POST 
@@ -78,7 +100,11 @@ Route : / API/LOST
 
 (body)- an object
 ```sh
-TO COME
+{
+	"name": "newAnimalName",
+	"species": "cat",
+	"photo": "www.photo.com"
+}
 ```
 
 Method : GET 
