@@ -24,8 +24,7 @@ class Upload extends React.Component {
   submit(e) {
     e.preventDefault()
     e.target.reset()
-    let {user_name, password, confirm_password, contact_details, email_address} = this.state
-    if (confirm_password != password) return this.props.dispatch(loginError("Passwords don't match"))
+    let {animal_name, animal_type, animal_description, animal_image} = this.state
     this.props.dispatch(registerUserRequest(this.state))
   }
   render() {
@@ -40,9 +39,12 @@ class Upload extends React.Component {
           <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Name" type="text" name="animal_name" onChange={this.updateDetails}/>
         </label>
         {/* Animal Type Form */}
-        <div className="columns">
-          <label className="column is-6 label is-large has-text-centered">Animal Type
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Cat/Dog" type="text" name="animal_type" onChange={this.updateDetails}/>
+        <div className="columns dropdown is-active">
+          <label className="column is-6 label is-large has-text-centered">Animal Type<br/>
+          <select value={this.state.value} onChange={this.updateDetails}>
+          <option className="input is-large has-text-centered is-fullwidth" value="Cat">Cat</option>
+          <option className="input is-large has-text-centered is-fullwidth" value="Dog">Dog</option>
+        </select>
           </label>
           </div>
           {/* Animal Description Form */}
