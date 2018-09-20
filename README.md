@@ -64,6 +64,88 @@ Gitmasters (send pull requests to these people for approval)
 * 10 Deploy 2
 
  ---
+## API DOCUMENTATION
+Method : GET 
+Route : / API/LOST
+
+(body)- - an array of objects
+```sh
+TO COME
+```
+
+Method : POST 
+Route : / API/LOST
+
+(body)- an object
+```sh
+TO COME
+```
+
+Method : GET 
+Route : / API/FOUND
+
+(body) - an array of objects
+```sh
+[
+    {
+        "id": 1,
+        "species": "dog",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd6_vciktketOzivsqfDiULHwFo87ptR5JJtA8pbDBZDkcbnU",
+        "user_id": 1   
+    },
+    {
+        "id": 2,
+        "species": "cat",
+        "photo": "https://yt3.ggpht.com/a-/AN66SAwnPp08tm2g7r7b6OcFvB9KQLvSFIJYUwgyKw=s900-mo-c-c0xffffffff-rj-k-no",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "species": "dog",
+        "photo": "https://static01.nyt.com/images/2018/06/26/business/25ugileistdog-sub/merlin_140144286_193276f3-89e9-44a8-a828-51ec9ff5bc8e-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+        "user_id": 2
+    },
+]
+```
+
+Method : POST 
+Route : / API/FOUND
+
+(body) - an object
+```sh
+{"species":"big dog",
+"photo":"987.html",
+////// the user_id does not fill the DB need to do it as an action client side //////////
+"user_id":
+}
+```
+
+Method : POST 
+Route : / API/AUTH/REGISTER
+
+(body) - an object
+```sh
+{"user_name":"bob",
+"contact_details":"123 valley alley",
+"email_address":"abc@gmail.com",
+"hash":"bob"
+} 
+```
+
+Method : POST 
+Route : / API/AUTH/LOGIN
+
+(body) - an object
+```sh
+{
+"user_name":"bob",
+"hash":"bob"
+} 
+```
+
+ ---
+
+ ---
 
 The focus of this app is to practice using the Full Stack we teach, (with auth) in a large scale app.
 
