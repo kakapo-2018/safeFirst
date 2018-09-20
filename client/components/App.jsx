@@ -7,8 +7,8 @@ import Register from './Register'
 import Nav from './Nav'
 import Upload from './Upload'
 import List from './List'
-// import {getFound} from '../actions/found'
-// import {getLost} from '../actions/lost'
+import {getFound} from '../actions/found'
+import {getLost} from '../actions/lost'
 
 
 class App extends React.Component {
