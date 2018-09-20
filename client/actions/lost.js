@@ -1,17 +1,25 @@
-import request from '../utils/api'
-import {something} from '../utils/api'
+export const RECEIVE_LOST_PETS = 'RECEIVE_LOST_PETS'
+export const ADD_LOST_PET = 'ADD_LOST_PET'
 
 
-function fetchLostPets () {
+export function fetchLostPets () {
     return {
-        type: 'RECEIVE_LOST_PETS'
-        ????
+        type: 'RECEIVE_LOST_PETS',
     }
 }
 
-function addLostPet () {
+export function addLostPet () {
     return {
-        type: 'ADD_LOST_PET'
-        ????
+        type: 'ADD_LOST_PET',
+        payload: {
+        id: id,
+        name: name,
+        species: species,
+        photo: photo,
+        user_id: user_id
+        }
     }
 }
+
+
+

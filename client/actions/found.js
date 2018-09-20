@@ -1,18 +1,22 @@
-import request from '../utils/api'
-import {something} from '../utils/api'
+export const RECEIVE_FOUND_PETS = 'RECEIVE_FOUND_PETS'
+export const ADD_FOUND_PET = 'ADD_FOUND_PET'
 
 
-function fetchFoundPets () {
+export function fetchFoundPets () {
     return {
-        type: 'RECEIVE_FOUND_PETS'
-        ????
+        type: 'RECEIVE_FOUND_PETS',
     }
 }
 
-function addFoundPet () {
+export function addFoundPet () {
     return {
-        type: 'ADD_FOUND_PET'
-        ????
+        type: 'ADD_FOUND_PET',
+        payload: {
+        id: id,
+        species: species,
+        photo: photo,
+        user_id: user_id
+        }
     }
 }
 
