@@ -5,21 +5,20 @@ import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Nav from './Nav'
-import {getFound} from '../actions/found'
-import {getLost} from '../actions/lost'
+import Upload from './Upload'
+import List from './List'
+// import {getFound} from '../actions/found'
+// import {getLost} from '../actions/lost'
 
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      auth: auth,
-    }
   }
 
   componentDidMount() {
-    this.props.dispatch(getFound())
-    this.props.dispatch(getLost())
+    // this.props.dispatch(getFound())
+    // this.props.dispatch(getLost())
   }
   
   render() {
@@ -37,7 +36,7 @@ class App extends React.Component {
           </div> 
     
           <div className=''>
-            {!auth.isAuthenticated &&
+            {!this.props.auth.isAuthenticated &&
               <Route exact path="/" component={Login} />
             }
             <Route path="/login" component={Login} />
