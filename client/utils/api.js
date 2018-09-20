@@ -5,7 +5,7 @@ import { isAuthenticated } from './auth'
 
 const baseURL = '/api/'
 
-export default function consume(method = 'get', endpoint, data = {}) {
+export function consume(method = 'get', endpoint, data = {}) {
   const dataMethod = method.toLowerCase() === 'get' && 'query' || 'send'
   const token = get('token')
   const headers = {
@@ -25,10 +25,7 @@ export default function consume(method = 'get', endpoint, data = {}) {
     })
 }
 
-
-
-
-export default function addLost (lostPet, callback) {
+export function addLost (lostPet, callback) {
   request
   .post('/api/lost')
   .send(lostPet)
@@ -38,7 +35,7 @@ export default function addLost (lostPet, callback) {
 }
 
 
-export default function addFound (foundPet, callback) {
+export function addFound (foundPet, callback) {
   request
   .post('/api/lost')
   .send(foundPet)
