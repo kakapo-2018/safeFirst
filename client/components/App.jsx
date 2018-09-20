@@ -7,60 +7,55 @@ import Register from './Register'
 import Nav from './Nav'
 import Upload from './Upload'
 import List from './List'
-//import Header from './Header'
+// import {getFound} from '../actions/found'
+// import {getLost} from '../actions/lost'
 
 
-const App = ({auth}) => (
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-
-  <Router>
-    <div className="container has-text-centered">
-
-      <div className="hero is-small is-primary">
-        <div className="hero-body has-text-centered">
-          <Link to='/' className="">
-            <h1 className="title is-1">Lost and Found</h1>
-          </Link>
-          <Nav />
+  componentDidMount() {
+    // this.props.dispatch(getFound())
+    // this.props.dispatch(getLost())
+  }
+  
+  render() {
+    return ( 
+      <Router>
+        <div className="container has-text-centered">
+    
+          <div className="hero is-small is-primary">
+            <div className="hero-body has-text-centered">
+              <Link to='/' className="">
+                <h1 className="title is-1">Lost and Found</h1>
+              </Link>
+              <Nav />
+            </div>
+          </div> 
+    
+          <div className=''>
+            {!this.props.auth.isAuthenticated &&
+              <Route exact path="/" component={Login} />
+            }
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/upload" component={Upload} />
+            <Route path="/list" component={List} />
+          </div>
+    
         </div>
-      </div> 
-
-
-      <div className=''>
-        {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
-        }
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/upload" component={Upload} />
-        <Route path="/list" component={List} />
-      </div>
-
-    </div>
-  </Router>
-)
-
-const mapStateToProps = ({auth}) => {
-  return {
-    auth
+      </Router>
+    )
   }
 }
 
 const mapStateToProps = (state) => {
-  let auth = state.auth
-
-  console.log(state)
-
   return {
-    auth
+    auth: state.auth
   }
 }
-
-
-let auth = state.auth
-let cats = state.cats
-
-let {auth,cats} = state
 
 export default connect(mapStateToProps)(App)
 
