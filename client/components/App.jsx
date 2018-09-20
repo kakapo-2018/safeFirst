@@ -7,7 +7,9 @@ import Register from './Register'
 import Nav from './Nav'
 import Upload from './Upload'
 import List from './List'
-//import Header from './Header'
+import LostList from './LostList';
+//import LostList from './LostList'
+import FoundList from './FoundList'
 
 
 const App = ({auth}) => (
@@ -25,9 +27,11 @@ const App = ({auth}) => (
 
 
       <div className=''>
-        {!auth.isAuthenticated &&
+        {/* {!auth.isAuthenticated && */}
           <Route exact path="/" component={Login} />
-        }
+          <Route path="/" component={LostList}/>
+          <Route path="/" component={FoundList}/>
+        {/* } */}
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/upload" component={Upload} />
