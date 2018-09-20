@@ -65,21 +65,24 @@ Gitmasters (send pull requests to these people for approval)
 
  ---
 ## API DOCUMENTATION
-Method : GET / API/LOST
+Method : GET 
+Route : / API/LOST
 
 (body)- - an array of objects
 ```sh
 TO COME
 ```
 
-Method : POST / API/LOST
+Method : POST 
+Route : / API/LOST
 
 (body)- an object
 ```sh
 TO COME
 ```
 
-Method : GET / API/FOUND
+Method : GET 
+Route : / API/FOUND
 
 (body) - an array of objects
 ```sh
@@ -105,7 +108,8 @@ Method : GET / API/FOUND
 ]
 ```
 
-Method : POST / API/FOUND
+Method : POST 
+Route : / API/FOUND
 
 (body) - an object
 ```sh
@@ -116,7 +120,8 @@ Method : POST / API/FOUND
 }
 ```
 
-Method : POST / API/AUTH/REGISTER
+Method : POST 
+Route : / API/AUTH/REGISTER
 
 (body) - an object
 ```sh
@@ -127,7 +132,8 @@ Method : POST / API/AUTH/REGISTER
 } 
 ```
 
-Method : POST / API/AUTH/LOGIN
+Method : POST 
+Route : / API/AUTH/LOGIN
 
 (body) - an object
 ```sh
