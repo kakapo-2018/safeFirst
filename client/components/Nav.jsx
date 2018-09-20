@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout'
 
+
 class Nav extends React.Component {
   constructor(props) {
     super(props)
@@ -28,6 +29,7 @@ class Nav extends React.Component {
         </div>
         <div id="navbarMenuHeroA" className={`navbar-menu ${showBurger ? "is-active" : ''}`}>
           <div className="navbar-end">
+
             {auth.isAuthenticated
               ? <Link to="/" onClick={this.props.logout} className="navbar-item is-large">Logout</Link>
               : [

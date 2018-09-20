@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {registerUserRequest} from '../actions/register'
 import {loginError} from '../actions/login'
+import {Link} from 'react-router-dom'
 
 class List extends React.Component {
   constructor(props) {
@@ -31,8 +32,9 @@ class List extends React.Component {
   render() {
     const {auth} = this.props
     return (
+      // START of List form
       <form className="Register form box" onSubmit={this.submit}>
-        <h1 className="title is-2">List</h1>
+        <h1 className="title is-2">Liiiiiiist</h1>
         <hr />
         {auth.errorMessage && <div className="has-text-danger is-large">{auth.errorMessage}</div>}
         <label className="column is-6 label is-large has-text-centered">Animal Name
@@ -54,6 +56,8 @@ class List extends React.Component {
         </div>
         <input className="button is-success is-large is-fullwidth" value="Submit" type="submit" />
       </form>
+      // END of list form
+      
     )
   }
 }

@@ -20,18 +20,18 @@ const App = ({auth}) => (
             <h1 className="title is-1">Lost and Found</h1>
           </Link>
           <Nav />
+          
         </div>
       </div> 
 
 
       <div className=''>
-        {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
-        }
-        <Route path="/login" component={Login} />
+        {!auth.isAuthenticated && <Route exact path="/" component={Login} />}
+                
+        <Route path="/upload" component={Upload} />   
         <Route path="/register" component={Register} />
-        <Route path="/upload" component={Upload} />
-        <Route path="/list" component={List} />
+        
+        
       </div>
 
     </div>
