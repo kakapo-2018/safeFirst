@@ -100,8 +100,13 @@ Route : / API/LOST
 
 (body)- an object
 ```sh
-TO COME
+{
+	"name": "newAnimalName",
+	"species": "cat",
+	"photo": "www.photo.com"
+}
 ```
+
 
 Method : GET 
 Route : / API/FOUND
