@@ -11,6 +11,8 @@ import List from './List'
 
 
 const App = ({auth}) => (
+
+
   <Router>
     <div className="container has-text-centered">
 
@@ -44,4 +46,22 @@ const mapStateToProps = ({auth}) => {
   }
 }
 
+const mapStateToProps = (state) => {
+  let auth = state.auth
+
+  console.log(state)
+
+  return {
+    auth
+  }
+}
+
+
+let auth = state.auth
+let cats = state.cats
+
+let {auth,cats} = state
+
 export default connect(mapStateToProps)(App)
+
+
