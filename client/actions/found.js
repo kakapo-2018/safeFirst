@@ -1,3 +1,5 @@
+import request from 'superagent'
+
 export function fetchFoundPets (foundPets) {
     return {
         type: 'RECEIVE_FOUND_PETS',
@@ -18,7 +20,7 @@ export function addFoundPet () {
 }
 
 
-export default function getFound () {
+export function getFound () {
     return (dispatch) => {
         request
         .get('/api/found')

@@ -1,3 +1,4 @@
+import request from 'superagent'
 
 export function fetchLostPets (lostPets) {
     return {
@@ -20,7 +21,7 @@ export function addLostPet () {
 }
 
 
-export default function getLost () {
+export function getLost () {
     return (dispatch) => {
         request
         .get('/api/lost')
