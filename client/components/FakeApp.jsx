@@ -12,6 +12,10 @@ import {getLost} from '../actions/lost'
 class App extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            auth: auth,
+
+        }
       }
 
 componentDidMount() {
@@ -19,36 +23,37 @@ componentDidMount() {
     this.props.dispatch(getLost())
 }
 
-
-const App = ({auth}) => (
-  <Router>
-    <div className="container has-text-centered">
-
-      <div className="hero is-small is-primary">
-        <div className="hero-body has-text-centered">
-          <Link to='/' className="">
-            <h1 className="title is-1">Lost and Found</h1>
-          </Link>
-          <Nav />
+render() {
+    return (
+        <Router>
+        <div className="container has-text-centered">
+    
+          <div className="hero is-small is-primary">
+            <div className="hero-body has-text-centered">
+              <Link to='/' className="">
+                <h1 className="title is-1">Lost and Found</h1>
+              </Link>
+              <Nav />
+            </div>
+          </div>
+    
+          <div className=''>
+            {!auth.isAuthenticated &&
+              <Route exact path="/" component={Login} />
+            }
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+          </div>
+    
         </div>
-      </div>
-
-      <div className=''>
-        {!auth.isAuthenticated &&
-          <Route exact path="/" component={Login} />
-        }
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-      </div>
-
-    </div>
-  </Router>
-)
+      </Router>
+    )
 }
 
-const mapStateToProps = ({auth}) => {
+const mapStateToProps = (state) => {
   return {
-    auth
+    auth,
+    
   }
 }
 
