@@ -17,8 +17,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.dispatch(getFound())
-    // this.props.dispatch(getLost())
+    this.props.dispatch(getFound())
+    this.props.dispatch(getLost())
   }
   
   render() {

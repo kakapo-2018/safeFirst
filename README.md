@@ -70,7 +70,29 @@ Route : / API/LOST
 
 (body)- - an array of objects
 ```sh
-TO COME
+[
+    {
+        "id": 1,
+        "name": "Rodger",
+        "species": "Cat",
+        "photo": "https://picsum.photos/200/300",
+        "user_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Topsy",
+        "species": "Dog",
+        "photo": "https://picsum.photos/100/200",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Raster",
+        "species": "Hedgehog",
+        "photo": "https://picsum.photos/60/30",
+        "user_id": 3
+    }
+]
 ```
 
 Method : POST 
@@ -78,8 +100,13 @@ Route : / API/LOST
 
 (body)- an object
 ```sh
-TO COME
+{
+	"name": "newAnimalName",
+	"species": "cat",
+	"photo": "www.photo.com"
+}
 ```
+
 
 Method : GET 
 Route : / API/FOUND
@@ -123,7 +150,20 @@ Route : / API/FOUND
 Method : POST 
 Route : / API/AUTH/REGISTER
 
-(body) - an object
+(body) - an object / if correct new user :
+```sh
+{"user_name":"OTHERbob",
+"contact_details":"123 valley alley",
+"email_address":"abc@gmail.com",
+"password":"bob"
+} 
+```
+Will return
+```sh
+{"message":"Authentication successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib2JCT0IiLCJpYXQiOjE1Mzc0ODM4MDMsImV4cCI6MTUzNzU3MDIwM30.UfxJJQ8b0ppekGycWMu6FydSb3RaW0i8couDx3bOwjc"}
+```
+
+(body) - an object /if user name exists :
 ```sh
 {"user_name":"bob",
 "contact_details":"123 valley alley",
@@ -131,18 +171,58 @@ Route : / API/AUTH/REGISTER
 "hash":"bob"
 } 
 ```
-
-Method : POST 
-Route : / API/AUTH/LOGIN
-
-(body) - an object
+Will return
 ```sh
-{
-"user_name":"bob",
-"hash":"bob"
-} 
+{"message":"User Name Taken"}
 ```
 
+/!\ only mandatory to habe a name a password as a string
+```sh
+{
+"user_name":"OTTERbob",
+"password":""
+} 
+```
+Will return
+```sh
+{"message":"Authentication successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJPVFRFUmJvYiIsImlhdCI6MTUzNzQ4NTEwOCwiZXhwIjoxNTM3NTcxNTA4fQ.g8J41Y5dZHMVSOY-_aJHRZUbVJfYOglUVRVjneFshxs"}
+```
+
+
+Method : POST 
+Route : / API/AUTH/LOGIN 
+
+(body) - an object / if correct combinaison :
+```sh
+{"user_name":"bob",
+"password":"krunk"
+} 
+```
+Will return
+```sh
+{"message":"Authentication successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib2IiLCJpYXQiOjE1Mzc0ODQ4MTUsImV4cCI6MTUzNzU3MTIxNX0.wNY3GveyZIeBKwDVpJ3ulkYE_KQv-T4cnuQz4bAsCWw"}
+```
+
+(body) - an object / if incorrect password :
+```sh
+{"user_name":"bob",
+"password":"bob"
+} 
+```
+Will return
+```sh
+{"message":"Password is incorrect"}
+```
+(body) - an object / if incorrect name :
+```sh
+{"user_name":"maurice123",
+"password":"krunk"
+} 
+```
+Will return
+```sh
+{"message":"User does not exist"}
+```
  ---
 
  ---

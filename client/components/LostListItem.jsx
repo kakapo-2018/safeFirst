@@ -1,14 +1,14 @@
 import React from 'react'
-
+import {getLost} from '../actions/lost'
 
 const LostListItem = (props) => {
     const lost = props.lost
     return (
         <div className='lost'>
-            <h1>Why you lost?</h1>
-            {/* <p className='name'>{lost.name}</p>
-            <p className='name'>{lost.name}</p>
-            <img src={lost.photo}/> */}
+            <p>Lost Name</p>
+            <p>Lost Description</p>
+            <p>Lost Species </p>
+            
         </div>
     )
 }

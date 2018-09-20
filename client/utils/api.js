@@ -37,7 +37,7 @@ export function addLost (lostPet, callback) {
 
 export function addFound (foundPet, callback) {
   request
-  .post('/api/lost')
+  .post('/api/found')
   .send(foundPet)
   .end((err, res) => {
     callback(err, res)
