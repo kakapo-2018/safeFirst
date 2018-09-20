@@ -24,8 +24,7 @@ class Upload extends React.Component {
   submit(e) {
     e.preventDefault()
     e.target.reset()
-    let {user_name, password, confirm_password, contact_details, email_address} = this.state
-    if (confirm_password != password) return this.props.dispatch(loginError("Passwords don't match"))
+    let {animal_name, animal_type, animal_description, animal_image} = this.state
     this.props.dispatch(registerUserRequest(this.state))
   }
   render() {
@@ -34,23 +33,32 @@ class Upload extends React.Component {
       <form className="Register form box" onSubmit={this.submit}>
         <h1 className="title is-2">Upload Lost</h1>
         <hr />
+        {/* Animal Name Form */}
         {auth.errorMessage && <div className="has-text-danger is-large">{auth.errorMessage}</div>}
         <label className="column is-6 label is-large has-text-centered">Animal Name
           <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Name" type="text" name="animal_name" onChange={this.updateDetails}/>
         </label>
-        <div className="columns">
-          <label className="column is-6 label is-large has-text-centered">Animal Type
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Cat/Dog" type="text" name="animal_type" onChange={this.updateDetails}/>
+        {/* Animal Type Form */}
+        <div className="columns dropdown is-active">
+          <label className="column is-6 label is-large has-text-centered">Animal Type<br/>
+          <select value={this.state.value} onChange={this.updateDetails}>
+          <option className="input is-large has-text-centered is-fullwidth" value="Cat">Cat</option>
+          <option className="input is-large has-text-centered is-fullwidth" value="Dog">Dog</option>
+        </select>
           </label>
+          </div>
+          {/* Animal Description Form */}
+          <div className="columns">
           <label className="column is-6 label is-large has-text-centered">Animal Description
             <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Description" type="text" name="animal_description" onChange={this.updateDetails}/>
           </label>
         </div>
         <br />
+        {/* Animal Image Form */}
         <div className="columns">
           <label className="column is-6 label is-large has-text-centered">Animal Image
             <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Image" type="text" name="animal_image" onChange={this.updateDetails}/>
-          </label>
+            </label>
         </div>
         <input className="button is-success is-large is-fullwidth" value="Submit" type="submit" />
       </form>
