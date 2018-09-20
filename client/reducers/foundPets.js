@@ -1,5 +1,4 @@
 import {getFound} from '../utils/api'
-import {RECEIVE_FOUND_PETS, ADD_FOUND_PET} from '../actions/found'
 
 const initialState = {
     getFound: getFound()
@@ -7,11 +6,11 @@ const initialState = {
 
 export default function foundPets (state = initialState, action) {
     switch (action.type) {
-        case RECEIVE_FOUND_PETS:
+        case 'RECEIVE_FOUND_PETS':
         return {
             foundAnimals: [...state, null]
         }
-        case ADD_FOUND_PET:
+        case 'ADD_FOUND_PET':
         return {
             foundAnimals: [...state, action.payload]
         }

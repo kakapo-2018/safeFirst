@@ -1,6 +1,3 @@
-export const RECEIVE_LOST_PETS = 'RECEIVE_LOST_PETS'
-export const ADD_LOST_PET = 'ADD_LOST_PET'
-
 
 export function fetchLostPets () {
     return {
@@ -22,4 +19,15 @@ export function addLostPet () {
 }
 
 
+export default function getLost () {
+    return request 
+    .get('/api/lost')
+    .then (res => {
+      const lostAnimals = res.body
+      return lostAnimals
+    })
+    .catch(() => {
+      throw Error('You need to implement an API route for /api/lost')
+    })
+  }
 

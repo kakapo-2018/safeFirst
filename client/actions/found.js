@@ -1,6 +1,3 @@
-export const RECEIVE_FOUND_PETS = 'RECEIVE_FOUND_PETS'
-export const ADD_FOUND_PET = 'ADD_FOUND_PET'
-
 
 export function fetchFoundPets () {
     return {
@@ -21,4 +18,15 @@ export function addFoundPet () {
 }
 
 
-
+export default function getFound () {
+    return request 
+    .get('/api/found')
+    .then (res => {
+      const foundAnimals = res.body
+      return foundAnimals
+    })
+    .catch(() => {
+      throw Error('You need to implement an API route for /api/found')
+    })
+  }
+  
