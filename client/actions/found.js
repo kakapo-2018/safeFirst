@@ -36,7 +36,6 @@ export function getFound () {
 
 export function addFound (formInput) {
     return dispatch => {
-        console.log(formInput)
         request
         .post('/api/found')
         .send(formInput)

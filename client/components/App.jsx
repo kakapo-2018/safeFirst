@@ -30,7 +30,7 @@ class App extends React.Component {
       <Router>
         <div className="container has-text-centered">
     
-          <div className="hero is-small is-rprimary">
+          <div className="hero is-small is-primary">
             <div className="hero-body has-text-centered">
               <Link to='/' className="">
                 <h1 className="title is-1">Lost and Found</h1>
