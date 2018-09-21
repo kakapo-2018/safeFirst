@@ -1,19 +1,25 @@
 import React from 'react'
-
-
-// import LostList from '../../seeds/lost' // fill in once we get the array name
+import LostListItem from './LostListItem'
+import { connect } from 'react-redux'
 
 const LostList = (props) => {
-    return (
-      <div className='lostlist'>
-        <p className='welcome'>Lost Animals</p>
-        {/* {props.lost.map(lost => {  // need the name of our array in db
-          return (
-            <LostListItem key={lost.id}/>
-          )
-        })} */}
-      </div>
-    )
+  return (
+    <div className='lostlist'>
+      <h1>Lost</h1>
+      {props.lost.map(lost => {
+        return (
+          <LostListItem lost={lost} />
+        )
+      })}
+    </div>
+  )
+}
+const mapStateToProps = (state) => {
+  return {
+    lost: state.lostPets
   }
-  
-  export default LostList
+}
+
+export default connect(
+  mapStateToProps,
+)(LostList)

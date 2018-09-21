@@ -1,4 +1,5 @@
 export default function foundPets (state = [], action) {
+
     switch (action.type) {
         case 'RECEIVE_FOUND_PETS':
             return action.foundPets        

@@ -1,19 +1,27 @@
 import React from 'react'
-
-
-//import FoundList from '../../' // fill in once we get the data
+import FoundListItem from './FoundListItem'
+import { connect } from 'react-redux'
 
 const FoundList = (props) => {
-    return (
-      <div className='foundlist'>
-        <p className='welcome'>Found Animals</p>
-        {/* {props.found.map(found => {  // need the name of our array in db
-          return (
-            <FoundListItem key={found.id} />
-          )
-        })} */}
-      </div>
-    )
+  return (
+    <div className='foundlist'>
+      <h1>Found</h1>
+
+      {props.found.map(found => {
+        return (
+          <FoundListItem found={found} />
+        )
+      })}
+    </div>
+  )
+}
+
+const mapStateToProps = (state) => {
+  return {
+    found: state.foundPets
   }
-  
-  export default FoundList
+}
+
+export default connect(
+  mapStateToProps,
+)(FoundList)
