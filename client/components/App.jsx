@@ -11,6 +11,7 @@ import Contact from './Contact'
 import Found from './AddFound'
 import Footer from './Footer'
 
+
 import {getFound, addFound} from '../actions/found'
 import {getLost, addLost} from '../actions/lost'
 
@@ -33,7 +34,12 @@ class App extends React.Component {
           <div className="hero is-small is-primary">
             <div className="hero-body has-text-centered">
               <Link to='/' className="">
-                <h1 className="title is-1">Lost and Found</h1>
+              
+              <div className="title-image" >
+              <img src='title.svg'></img>
+              </div>
+              
+             
               </Link>
               <Nav />
             </div>
