@@ -7,8 +7,8 @@ import Register from './Register'
 import Nav from './Nav'
 import Upload from './Upload'
 import List from './List'
-import {getFound} from '../actions/found'
-import {getLost} from '../actions/lost'
+import {getFound, addFound} from '../actions/found'
+import {getLost, addLost} from '../actions/lost'
 
 
 class App extends React.Component {
@@ -19,6 +19,8 @@ class App extends React.Component {
   componentDidMount() {
     this.props.dispatch(getFound())
     this.props.dispatch(getLost())
+    this.props.dispatch(addFound())
+    this.props.dispatch(addLost())
   }
   
   render() {

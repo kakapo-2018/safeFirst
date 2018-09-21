@@ -25,21 +25,4 @@ export function consume(method = 'get', endpoint, data = {}) {
     })
 }
 
-export function addLost (lostPet, callback) {
-  request
-  .post('/api/lost')
-  .send(lostPet)
-  .end((err, res) => {
-    callback(err, res)
-  })
-}
 
-
-export function addFound (foundPet, callback) {
-  request
-  .post('/api/found')
-  .send(foundPet)
-  .end((err, res) => {
-    callback(err, res)
-  })
-}
