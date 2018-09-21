@@ -9,8 +9,8 @@ function postFound (req, res, next) {
   const photo = req.body.photo
   const user_id = req.body.user_id
 
-  const newLost = {species, photo, user_id}
-    createFound (species, photo)
+  //const newLost = {species, photo, user_id}
+    createFound (species, photo, user_id)
         .then(() => next())
         .catch(err => {
           res.status(500).send({message: "Server Error in found exist"})

@@ -13,10 +13,11 @@ function register (req, res, next) {
       createUser(user_name, contact_details, email_address, password)
         .then(() => next())
         .catch(err => {
-          res.status(500).send({message: "Server Error"})
+          
+          res.status(500).send({message: "Server Error - create user"})
         })
     })
-    .catch(err => res.status(500).send({message: "Server Error"}))
+    .catch(err => res.status(500).send({message: "Server Error - user exists"}))
 }
 
 

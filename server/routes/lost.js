@@ -6,8 +6,8 @@ router.get('/', getLostAnimalsRoute)
 var { createLostAnimal, getLostAnimals } = require('../db/lostAnimals')
 
 function lostRoute(req, res, next) {
-	const { name, species, photo } = req.body
-	createLostAnimal(name, species, photo)
+	const { name, species, photo, user_id } = req.body
+	createLostAnimal(name, species, photo, user_id)
 		.then(() => next())
 		.catch(err => {
 			res.status(500).send({ message: "Server Error" })
