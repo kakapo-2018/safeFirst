@@ -8,7 +8,8 @@ const List = () => {
   return (
     <div className='foundlist'>
       <p className='welcome'>List page</p>
-      <button><Link to='/upload'>Upload Missing Animal</Link></button>
+      <button><Link to='/Lost'>Upload Lost Animal</Link></button> 
+      <button><Link to='/Found'>Upload Found Animal</Link></button>
     </div>
   )
 }
