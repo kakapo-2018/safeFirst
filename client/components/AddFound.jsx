@@ -3,14 +3,14 @@ import {connect} from 'react-redux'
 import {registerUserRequest} from '../actions/register'
 import {loginError} from '../actions/login'
 
-class Upload extends React.Component {
+class AddFound extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      animal_name: '',
-      animal_type:'',
-      animal_description:'',
-      animal_image:''
+      id: '',
+      species:'',
+      photo:'',
+      user_id:''
     }
     this.updateDetails = this.updateDetails.bind(this)
     this.submit = this.submit.bind(this)
@@ -30,36 +30,37 @@ class Upload extends React.Component {
     const {auth} = this.props
     return (
       <form className="Register form box" onSubmit={this.submit}>
-        <h1 className="title is-2">Upload Lost</h1>
+        <h1 className="title is-2">Upload Found</h1>
         <hr />
         {/* Animal Name Form */}
         {auth.errorMessage && <div className="has-text-danger is-large">{auth.errorMessage}</div>}
-        <label className="column is-6 label is-large has-text-centered">Animal Name
-          <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Name" type="text" name="animal_name" onChange={this.updateDetails}/>
+        <label className="column is-6 label is-large has-text-centered">PlaceHolder
+          <input required className="input is-large has-text-centered is-fullwidth" placeholder="Hi" type="text" name="animal_name" onChange={this.updateDetails}/>
         </label>
         {/* Animal Type Form */}
-        <div className="columns dropdown is-active">
-          <label className="column is-6 label is-large has-text-centered">Animal Type<br/>
+        <div className="control">
+          <label className="column is-6 label is-large has-text-centered">Animal Species<br/>
           <select value={this.state.value} onChange={this.updateDetails}>
           <option className="input is-large has-text-centered is-fullwidth" value="Cat">Cat</option>
           <option className="input is-large has-text-centered is-fullwidth" value="Dog">Dog</option>
         </select>
           </label>
           </div>
-          {/* Animal Description Form */}
+          {/* Animal Photo Form */}
           <div className="columns">
-          <label className="column is-6 label is-large has-text-centered">Animal Description
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Description" type="text" name="animal_description" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">Animal Photo
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Lost Animal Image" type="text" name="animal_description" onChange={this.updateDetails}/>
           </label>
         </div>
         <br />
-        {/* Animal Image Form */}
+        {/* Animal User Form */}
         <div className="columns">
-          <label className="column is-6 label is-large has-text-centered">Animal Image
-            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Animal Image" type="text" name="animal_image" onChange={this.updateDetails}/>
+          <label className="column is-6 label is-large has-text-centered">User Name
+            <input required className="input is-large has-text-centered is-fullwidth" placeholder="Uploader Name" type="text" name="animal_image" onChange={this.updateDetails}/>
             </label>
         </div>
         <input className="button is-success is-large is-fullwidth" value="Submit" type="submit" />
+        <a href="./">Back</a>
       </form>
     )
   }
@@ -71,4 +72,4 @@ const mapStateToProps = ({auth}) => {
   }
 }
 
-export default connect(mapStateToProps)(Upload)
+export default connect(mapStateToProps)(AddFound)
