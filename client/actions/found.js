@@ -11,10 +11,9 @@ export function addFoundPet () {
     return {
         type: 'ADD_FOUND_PET',
         payload: {
-        id: id,
+        // id: id,
         species: species,
         photo: photo,
-        user_id: user_id
         }
     }
 }
@@ -33,3 +32,19 @@ export function getFound () {
           })
       }
     }
+
+
+export function addFound (formInput) {
+    return dispatch => {
+        request
+        .post('/api/found')
+        .send(formInput)
+        .end((err, res) => {
+            if (err) {
+                console.error(err.message)
+                return
+              }
+              dispatch(addFoundPet(formInput))
+            })
+        }
+      }

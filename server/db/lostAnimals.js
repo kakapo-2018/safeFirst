@@ -1,8 +1,8 @@
 const db = require('./connection')
 
-function createLostAnimal(name, species, photo) {
+function createLostAnimal(name, species, photo, user_id) {
 	return db('lost')
-		.insert({ name, species, photo })
+		.insert({ name, species, photo, user_id })
 		.catch(err => reject(err))
 }
 

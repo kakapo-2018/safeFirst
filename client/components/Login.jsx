@@ -13,7 +13,6 @@ class Login extends React.Component {
     this.submit = this.submit.bind(this)
   }
   componentDidMount() {
-    // this.props.dispatch(loginError(''))
   }
   updateDetails(e) {
     this.setState({[e.target.name]: e.target.value})
