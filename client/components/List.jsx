@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {registerUserRequest} from '../actions/register'
 import {loginError} from '../actions/login'
+
+
 import LostList from './LostList'
 import FoundList from './FoundList'
 
@@ -13,6 +15,7 @@ const List = (props) => {
       <LostList/>
       <h1>this is the found list list</h1>
       <FoundList/>
+
     </div>
   )
 }
