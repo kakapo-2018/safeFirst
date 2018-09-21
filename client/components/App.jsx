@@ -8,11 +8,11 @@ import Nav from './Nav'
 import Lost from './AddLost'
 import List from './List'
 import Contact from './Contact'
-import {getFound} from '../actions/found'
-import {getLost} from '../actions/lost'
 import Found from './AddFound'
 import Footer from './Footer'
 
+import {getFound, addFound} from '../actions/found'
+import {getLost, addLost} from '../actions/lost'
 
 
 class App extends React.Component {
@@ -21,6 +21,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.props.dispatch(getFound())
+    this.props.dispatch(getLost())
   }
   
   render() {
@@ -38,12 +40,9 @@ class App extends React.Component {
           </div> 
     
           <div className=''>
-            {!this.props.auth.isAuthenticated ?
+            {!this.props.auth.isAuthenticated &&
               <Route exact path="/" component={Login} />
-              : <Route exact path="/" component={List} />
             }
-            
-            
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/lost" component={Lost} />
