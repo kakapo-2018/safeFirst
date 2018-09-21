@@ -107,6 +107,7 @@ Route : / API/LOST
 }
 ```
 
+
 Method : GET 
 Route : / API/FOUND
 
@@ -149,7 +150,20 @@ Route : / API/FOUND
 Method : POST 
 Route : / API/FOUND
 
-(body) - an object
+(body) - an object / if correct new user :
+```sh
+{"user_name":"OTHERbob",
+"contact_details":"123 valley alley",
+"email_address":"abc@gmail.com",
+"password":"bob"
+} 
+```
+Will return
+```sh
+{"message":"Authentication successful","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib2JCT0IiLCJpYXQiOjE1Mzc0ODM4MDMsImV4cCI6MTUzNzU3MDIwM30.UfxJJQ8b0ppekGycWMu6FydSb3RaW0i8couDx3bOwjc"}
+```
+
+(body) - an object /if user name exists :
 ```sh
 {"species":"big dog",
 "photo":"987.html",
