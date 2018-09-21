@@ -11,11 +11,10 @@ export function addLostPet () {
     return {
         type: 'ADD_LOST_PET',
         payload: {
-        id: id,
-        name: name,
-        species: species,
-        photo: photo,
-        user_id: user_id
+            // id: id,
+            name: name,
+            species: species,
+            photo: photo,
         }
     }
 }
@@ -35,3 +34,17 @@ export function getLost () {
       }
     }
 
+export function addLost (formInput) {
+    return dispatch => {
+        request
+        .post('/api/lost')
+        .send(formInput)
+        .end((err, res) => {
+            if (err) {
+                console.error(err.message)
+                return
+                }
+                dispatch(addLostPet(formInput))
+            })
+        }
+        }
