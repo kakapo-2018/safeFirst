@@ -80,14 +80,14 @@ Stretch
 
 # DB (server)
 
-### Lost
+### Users
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
-  | id | Integer | Unique identifier for each lost animal |
-  | name | String | Name of Lost animal, because names are special <3 |
-  | species | String | What kind of animal is it? |
-  | photo | string | URL of a picture of the lost animal |
-  | user_id | integer | Id of the user who reported the animal as lost |
+  | id | Integer | Unique identifier for each user |
+  | user_name | String | Name of user logging in |
+  | email_address | String | Email address of registered user |
+  | contact details | string | Contact details of registered user |
+  | hash | string | The hashed password of the registered user |
 
 
 # Setup
