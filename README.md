@@ -4,9 +4,9 @@ Intro
 
 # Team
 
-Cameron - Product Owner
-Robert
-Richard
+Cameron - Product Owner</br>
+Robert<br>
+Richard<br>
 
 
 # Timeline
