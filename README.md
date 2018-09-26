@@ -88,6 +88,31 @@ Stretch
   | email_address | String | Email address of registered user |
   | contact details | string | Contact details of registered user |
   | hash | string | The hashed password of the registered user |
+  | company_id | integer | Secondary key to create a link to the Company table |
+  | industry_id | integer | Secondary key to create a link go the Industry table |
+
+### Company
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each company |
+  | company | String | Name of company |
+
+### Industry
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each industry |
+  | industry | String | Unique identifier for each industry |
+  
+### Incidents
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each user |
+  | user_name | String | Name of user logging in |
+  | email_address | String | Email address of registered user |
+  | contact details | string | Contact details of registered user |
+  | hash | string | The hashed password of the registered user |  
+  
+
 
 
 # Setup
