@@ -43,7 +43,7 @@ MVP<br>
 Stretch<br>
 - all files stored for anaylsis and auditing purposes by stakeholders
 - stakeholder e.g Principal, or Worksafe NZ has an admin access
-- 
+- database storage of the HSE Act 2015, Best practice guidelines, Code of Practice
 
 
 
