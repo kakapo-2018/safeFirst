@@ -10,7 +10,7 @@ Richard<br>
 
 ## Timeline
 
-| Sprint | Days | Summary | Client Side | Server Side|
+| Sprint | Days | Summary | Client Side | Server Side| Git Master | Agile Navigator|
 | --- | --- | --- | --- | --- |
 | 0 | Wednesday/Thursday | Planning | Boilerplate, create Components | Create DB Migrations and Seeds|
 | 1 | Friday/Saturday | Build structure | Build Components | Build Routes |
@@ -18,8 +18,8 @@ Richard<br>
 | 3 | Tuesday/Wednesday | Testing, CSS, Stretch | Testing React/Redux, Apply CSS and Design, Finishing touches, Stretches | Deploy, Testing |
 | 4 | Thursday | Prepare presentation | | |
 
-Sprint 0 - Wednesday/Thursday - Planning of the project, wireframing, data entity, API documentation, boilerplate, create Database, create components </br>
-Sprint 1 - Friday/Saturday - 
+
+
 
 ## User Stories
 
