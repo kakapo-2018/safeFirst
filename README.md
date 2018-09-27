@@ -31,13 +31,20 @@ Richard<br>
 
 ## User Stories
 
-MVP 
-User can use this application by filling out a digital form to</br>
+MVP<br> 
+1. User can use this application by filling out a digital form to;
 - take minutes for a safety meeting and identify hazards
 - take miniutes for a pre-start meeting and add any new hazards
 - file an incident/accident
+2. User dashboard that displays 
+- a list of most significant hazards for that day
+- a statistical graph of incident and accident trends
 
-Stretch
+Stretch<br>
+- all files stored for anaylsis and auditing purposes by stakeholders
+- stakeholder e.g Principal, or Worksafe NZ has an admin access
+- 
+
 
 
 ## Views (client side)
