@@ -1,7 +1,9 @@
 # safeFirst
 
 Intro
-
+For the client to fulfil their HSE (Health and Safety in Employment) obligations digitally in the workplace.
+As well as have all this information made available to stakeholders for analysis and auditing purposes.
+ 
 # Team
 
 Cameron - Product Owner</br>
