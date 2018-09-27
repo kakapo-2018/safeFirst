@@ -107,10 +107,15 @@ Stretch
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
-  | user_name | String | Name of user logging in |
-  | email_address | String | Email address of registered user |
-  | contact details | string | Contact details of registered user |
-  | hash | string | The hashed password of the registered user |  
+  | user_id | integer | user_id of the person who is currently logged in |
+  | incident type | String | The type of incident |
+  | datetime | integer | The date and time the incident took place in epoch format |
+  | task| string | The task performed when the incident occured (dropdown) |
+  | othertask| string | The task performed when the incident occured (free text field) |
+  | incident| string | Description of the incident (dropdown) |
+  | otherincident| string | Description of the incident (free text field) |
+  | location | string | Location of where the incident happened (free text field) |
+  | firstaid | boolean | Has first aid been administered true of false |
   
 
 
