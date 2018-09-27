@@ -5,6 +5,8 @@ exports.up = function(knex, Promise) {
       table.string('email_address')
       table.string('contact_details')
       table.string('hash')
+      table.integer('company_id')
+      table.integer('industry_id')
     })
   };
   
