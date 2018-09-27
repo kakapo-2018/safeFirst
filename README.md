@@ -8,11 +8,18 @@ Cameron - Product Owner</br>
 Robert<br>
 Richard<br>
 
-
 ## Timeline
 
-Dates
-Sprints
+| Sprint | Days | Summary | Client Side | Server Side|
+| --- | --- | --- | --- | --- |
+| 0 | Wednesday/Thursday | Planning | The Users JWT Token |
+| 1 | Friday/Saturday | Build structure | Build Components | Build Routes |
+| 2 | Sunday/Monday | Finish MVP | Finalise build of Components | Make adjustments where needed|
+| 3 | Tuesday/Wednesday | Testing, CSS, Stretch | Testing React/Redux, Apply CSS and Design, Finishing touches, Stretches | Deploy, Testing |
+| 4 | Thursday | Prepare presentation | | |
+
+Sprint 0 - Wednesday/Thursday - Planning of the project, wireframing, data entity, API documentation, boilerplate, create Database, create components </br>
+Sprint 1 - Friday/Saturday - 
 
 ## User Stories
 
@@ -41,8 +48,8 @@ Stretch
 | Get | /api/dashboard | Yes | List of hazards relevant for the current day (daily set to true)| Array of Objects (object = Hazard) |
 | Get | /api/dashboard | Yes | Statistics TBD | TBD |
 | Get | /api/hsmeeting | Yes | List of hazards where 'daily' is set to 'false' | Array of Objects (object = hazard) |
-| Post | /api/hsmeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
-| Post | /api/hsmeeting | Yes | Add a new meeting minute | The minute that was added (as an object) |
+| Post | /api/hsmeeting/hazard | Yes | Add a new hazard | The hazard that was added (as an object) |
+| Post | /api/hsmeeting/minute | Yes | Add a new meeting minute | The minute that was added (as an object) |
 | Post | /api/dailymeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
 | Post | /api/incident | Yes | Add new incident | The incident that was added (as an object) |
 | Get | /api/incident | Yes | List of all incidents raised | Array of Objects (object = incident) |
@@ -192,7 +199,7 @@ Route : / API/HSMEETING
 
 (body) - an object:
 ```sh
-{"datetime":"321415551",
+{"datetime":"2018-09-26 15:30",
 "location":"22 Cuba Street, Wellington",
 "issues": "The following issues were discussed: health and safety plan, incidents from the last month. This led to the following conclussions and actions points......"
 } 
@@ -230,7 +237,7 @@ Route : / API/INCIDENT
 {"id": 1,
 "user_id": "Sunburn",
 "incident_type": "Near Miss",
-"datetime": "1232255",
+"datetime": "2018-09-26 15:30",
 "task": "Other",
 "othertask": "Cutting a piece of wire",
 "incident": "Knife slipped and went through glove, but didn't cut finger",
@@ -249,7 +256,7 @@ Route : / API/INCIDENT
 	"id": 1,
 	"user_id": "Sunburn",
 	"incident_type": "Near Miss",
-	"datetime": "1232255",
+	"datetime": "2018-09-26 15:30",
 	"task": "Other",
 	"othertask": "Cutting a piece of wire",
 	"incident": "Knife slipped and went through glove, but didn't cut finger",
@@ -261,7 +268,7 @@ Route : / API/INCIDENT
 	"id": 1,
 	"user_id": "Sunburn",
 	"incident_type": "Near Miss",
-	"datetime": "1232255",
+	"datetime": "2018-09-26 15:30",
 	"task": "Other",
 	"othertask": "Cutting a piece of wire",
 	"incident": "Knife slipped and went through glove, but didn't cut finger",
@@ -302,7 +309,7 @@ Route : / API/INCIDENT
   | id | Integer | Unique identifier for each user |
   | user_id | integer | user_id of the person who is currently logged in |
   | incident_type | String | The type of incident |
-  | datetime | integer | The date and time the incident took place in epoch format |
+  | datetime | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |
   | task| string | The task performed when the incident occured (dropdown) |
   | othertask| string | The task performed when the incident occured (free text field) |
   | incident| string | Description of the incident (dropdown) |
@@ -323,7 +330,7 @@ Route : / API/INCIDENT
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
-  | datetime | integer | The date and time the meeting took place in epoch format |  
+  | datetime | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |  
   | location | string | Location of where the meeting was held | 
   | issues | string | Text report of issues identified | 
   
