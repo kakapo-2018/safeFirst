@@ -1,9 +1,7 @@
 # safeFirst
 
 Intro
-For the client to fulfil their HSE (Health and Safety in Employment) obligations digitally in the workplace.
-As well as have all this information made available to stakeholders for analysis and auditing purposes.
- 
+
 # Team
 
 Cameron - Product Owner</br>
@@ -74,8 +72,9 @@ Stretch
 | --- | --- | --- | --- | --- |
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
-| Get | /api/lost | No | Get the list of lost pets | Array of Objects (object = A Lost Pet) |
-| Get | /api/found | No | Get the list of found pets | Array of Objects (object = A Found Pet) |
+| Get | /api/dashboard | Yes | List of hazards relevant for the current day | Array of Objects (object = Hazard) |
+| Post | /api/hsmeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
+| Post | /api/hsmeeting | Yes | ?????? | ?????? |
 | Post | /api/lost | Yes | Add a Lost pet to the db | The Pet that was added (as an object) |
 | Post | /api/lost | Yes | Add a Found pet to the db | The Pet that was added (as an object) |
 
@@ -128,7 +127,16 @@ Stretch
   | risk | integer | Risk rating on a scale from 1 to 5 (where 5 is highest) |
   | control| string | Description of what has been done to mitigate the risk |
   | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
-  |  
+  
+### Hsmeeting
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each user |
+  | datetime | integer | The date and time the meeting took place in epoch format |  
+  | location | string | Location of where the meeting was held | 
+  | issues | string | Text report of issues identified | 
+  
+  
 
 
 
