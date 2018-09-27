@@ -5,6 +5,13 @@ function getIncidents(testDB) {
     return db('incidents')    
 }
 
+function postIncidents(newIncident, testDB) {
+    const db = testDB || connection
+    return db ('incidents')
+    .insert(newIncident)
+}
+
 module.exports = {
-    getIncidents
+    getIncidents,
+    postIncidents
 }

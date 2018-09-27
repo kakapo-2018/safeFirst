@@ -8,4 +8,12 @@ router.get('/', (req,res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    let data = req.body
+    db.postIncidents(data)
+    .then(incidents => {
+        res.json(incidents)
+    })
+})
+
 module.exports = router
