@@ -2,19 +2,19 @@
 
 Intro
 
-# Team
+## Team
 
 Cameron - Product Owner</br>
 Robert<br>
 Richard<br>
 
 
-# Timeline
+## Timeline
 
 Dates
 Sprints
 
-# API Documentation
+## API Documentation
 
 Method : GET 
 Route : / API/LOST
@@ -48,25 +48,25 @@ Route : / API/LOST
 
 
 
-# User Stories
+## User Stories
 
 MVP
 Stretch
 
 
-# Views (client side)
+## Views (client side)
 
 
 
-# Reducers (client side)
+## Reducers (client side)
 
 
 
-# Actions (client side)
+## Actions (client side)
 
 
 
-# API (client - server)
+## API (client - server)
 
 | Method | Endpoint | Protected | Usage | Response |
 | --- | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ Stretch
 | Post | /api/incident | Yes | Add new incident | The incident that was added (as an object) |
 | Get | /api/incident | Yes | List of all incidents raised | Array of Objects (object = incident) |
 
-# DB (server)
+## DB (server)
 
 ### Users
   | Column Name | Data Type | Purpose |
@@ -138,7 +138,7 @@ Stretch
   | location | string | Location of where the meeting was held | 
   | issues | string | Text report of issues identified | 
   
-# Setup
+## Setup
 
 Run the following commands in your terminal:
 
