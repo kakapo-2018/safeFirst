@@ -12,7 +12,7 @@ Richard<br>
 
 | Sprint | Days | Summary | Client Side | Server Side|
 | --- | --- | --- | --- | --- |
-| 0 | Wednesday/Thursday | Planning | The Users JWT Token |
+| 0 | Wednesday/Thursday | Planning | Boilerplate, create Components | Create DB Migrations and Seeds|
 | 1 | Friday/Saturday | Build structure | Build Components | Build Routes |
 | 2 | Sunday/Monday | Finish MVP | Finalise build of Components | Make adjustments where needed|
 | 3 | Tuesday/Wednesday | Testing, CSS, Stretch | Testing React/Redux, Apply CSS and Design, Finishing touches, Stretches | Deploy, Testing |
