@@ -5,7 +5,7 @@ This application is a resource that will assist contractors with administration 
 The application will cover the following;
 - Safety Meetings, 
 - Hazard Identification and Control, 
-- Daily Tailgate Meetings, and 
+- Daily Pre-Start Meetings, and 
 - Near miss / Accident reporting
 
 
@@ -31,7 +31,12 @@ Richard<br>
 
 ## User Stories
 
-MVP </br>
+MVP 
+User can use this application by filling out a digital form to</br>
+- take minutes for a safety meeting and identify hazards
+- take miniutes for a pre-start meeting and add any new hazards
+- file an incident/accident
+
 Stretch
 
 
