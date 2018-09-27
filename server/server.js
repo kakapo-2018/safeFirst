@@ -14,10 +14,9 @@ server.use(express.static(path.join(__dirname, '../public')))
 
 server.use('/api/auth', require('./routes/auth'))
 server.use('/api/dashboard', require('./routes/dashboard'))
-server.use('/api/dashboard', require('./routes/dashboard'))
-server.use('/api/hsmeeting', require('./routes/hsmeeting'))
-server.use('/api/dailymeeting', require('./routes/dailymeeting'))
-server.use('/api/incident', require('./routes/incident'))
+//server.use('/api/hsmeeting', require('./routes/hsmeeting'))
+//server.use('/api/dailymeeting', require('./routes/dailymeeting'))
+//server.use('/api/incident', require('./routes/incident'))
 
 
 module.exports = server
