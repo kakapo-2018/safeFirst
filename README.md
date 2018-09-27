@@ -48,6 +48,9 @@ Stretch<br>
 
 
 ## Views (client side)
+1. Landing with Login and Register buttons
+2. Login
+3.
 
 
 
