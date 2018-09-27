@@ -309,13 +309,13 @@ Route : / API/INCIDENT
   | id | Integer | Unique identifier for each user |
   | user_id | integer | user_id of the person who is currently logged in |
   | incident_type | String | The type of incident |
-  | datetime | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |
+  | date_time | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |
   | task| string | The task performed when the incident occured (dropdown) |
-  | othertask| string | The task performed when the incident occured (free text field) |
+  | other_task| string | The task performed when the incident occured (free text field) |
   | incident| string | Description of the incident (dropdown) |
-  | otherincident| string | Description of the incident (free text field) |
+  | other_incident| string | Description of the incident (free text field) |
   | location | string | Location of where the incident happened (free text field) |
-  | firstaid | boolean | Has first aid been administered true of false |
+  | first_aid | boolean | Has first aid been administered true of false |
   
 ### Hazards
   | Column Name | Data Type | Purpose |
