@@ -1,10 +1,10 @@
 .body {
-background-color: turquoise;
+background-color: darkgoldenrod;
 font-family: 'Work Sans', sans-serif;
 }
 
 .body-background-color {
-    background-color: turquoise;
+    background-color: darkgoldenrod
 }
 
 .section.app-container {
@@ -12,7 +12,7 @@ font-family: 'Work Sans', sans-serif;
 }
 
 .hero.body {
-    background-color: turquoise;
+    background-color: cadetblue;
 }
 
 .hero.is-primary {
@@ -47,6 +47,26 @@ div.title-image img{
 img {
     max-height: auto;
    width: 300px;
+}
+
+
+
+.has-text-danger {
+        
+}
+
+.label   {
 
 }
 
+.input {
+
+}
+
+.Register    {
+
+}
+
+.animation  {
+    
+}

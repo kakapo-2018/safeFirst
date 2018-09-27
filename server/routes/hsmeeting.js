@@ -18,3 +18,4 @@ router.post('/hazard', (req, res) => {
 })
 
 module.exports = router
+
