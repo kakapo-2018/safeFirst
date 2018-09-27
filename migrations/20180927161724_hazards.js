@@ -5,10 +5,6 @@ exports.up = function(knex, Promise) {
       table.string('risk')
       table.string('control')
       table.string('daily')
-      table.string('incident')
-      table.string('other_incident')
-      table.string('location')
-      table.string('first_aid')
     })
   };
   

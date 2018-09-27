@@ -3,6 +3,7 @@ exports.up = function(knex, Promise) {
     return knex.schema.createTableIfNotExists('incidents', table => {
       table.increments('id')
       table.integer('user_id')
+      table.string('person_involved')
       table.string('incident_type')
       table.string('date_time')
       table.string('task')
