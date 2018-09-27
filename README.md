@@ -291,13 +291,13 @@ Route : / API/INCIDENT
   | company_id | integer | Secondary key to create a link to the Company table |
   | industry_id | integer | Secondary key to create a link go the Industry table |
 
-### Company
+### Companies
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each company |
   | company | String | Name of company |
 
-### Industry
+### Industries
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each industry |
@@ -326,7 +326,7 @@ Route : / API/INCIDENT
   | control| string | Description of what has been done to mitigate the risk |
   | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
   
-### Meeting
+### Meetings
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
