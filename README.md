@@ -5,7 +5,7 @@ This application is a resource that will assist contractors with administration 
 The application will cover the following;
 - Safety Meetings, 
 - Hazard Identification and Control, 
-- Daily Pre-Start Meetings, and 
+- Daily Tailgate Meetings, and 
 - Near miss / Accident reporting
 
 
@@ -31,35 +31,28 @@ Richard<br>
 
 ## User Stories
 
-MVP<br> 
-1. User can use this application by filling out a digital form to;
-- take minutes for a safety meeting and identify hazards
-- take miniutes for a pre-start meeting and add any new hazards
-- file an incident/accident
-2. User dashboard that displays 
-- a list of most significant hazards for that day
-- a statistical graph of incident and accident trends
-
-Stretch<br>
-- all files stored for anaylsis and auditing purposes by stakeholders
-- stakeholder e.g Principal, or Worksafe NZ has an admin access
-- database storage of the HSE Act 2015, Best practice guidelines, Code of Practice
-
+MVP </br>
+Stretch
 
 
 ## Views (client side)
-1. Landing with Login and Register buttons
-2. Login
-3.
 
 
 
 ## Reducers (client side)
-
+We will need reducers for displaying a list of Registered incidents on the Incident form page.
+The information will be take from the information the registered user has has given on the Incident form page.
+When we click Add button on Daily Meeting Page, we will need to be able to take a hazard from the hazards table by filtering .
+We will need to be able to control the authentication side in terms of Logging In or Registering. this will involve cases for login request, login success, login failure, register request and register failure.
 
 
 ## Actions (client side)
-
+We will need actions for adding hazards to the hazard identification for the H & S Safety Meeting Page.
+When will click on Add button on Daily Meeting Page, afer we have filtered information from Hazards table, it will be added to Daily Meeting Page.
+We will need actions for login logout and register.
+Login will have export functions for receivelogin, loginError andloginUser and also a function for requestlogin.
+logout will have an export function for logoutUser and functions for requestLogout and receiveLogout.
+Register wil have an export function for registerUserRequest.
 
 
 ## API (client - server)
