@@ -254,7 +254,7 @@ Route : / API/INCIDENT
 [
 	{
 	"id": 1,
-	"user_id": "Sunburn",
+	"user_id": "2",
 	"incident_type": "Near Miss",
 	"datetime": "2018-09-26 15:30",
 	"task": "Other",
@@ -266,7 +266,7 @@ Route : / API/INCIDENT
 	}, 
 	{
 	"id": 1,
-	"user_id": "Sunburn",
+	"user_id": "5",
 	"incident_type": "Near Miss",
 	"datetime": "2018-09-26 15:30",
 	"task": "Other",
