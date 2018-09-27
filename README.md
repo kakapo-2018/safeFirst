@@ -315,7 +315,7 @@ Route : / API/INCIDENT
   | incident| string | Description of the incident (dropdown) |
   | other_incident| string | Description of the incident (free text field) |
   | location | string | Location of where the incident happened (free text field) |
-  | first_aid | boolean | Has first aid been administered true of false |
+  | first_aid | string | Has first aid been administered 'true' or 'false' |
   
 ### Hazards
   | Column Name | Data Type | Purpose |
@@ -324,7 +324,7 @@ Route : / API/INCIDENT
   | hazard | String | Description of the hazard |
   | risk | integer | Risk rating on a scale from 1 to 5 (where 5 is highest) |
   | control | string | Description of what has been done to mitigate the risk |
-  | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
+  | daily | string | is this risk to appear on the dashboard for the risks of the day, 'true' or 'false'
   
 ### Meetings
   | Column Name | Data Type | Purpose |
