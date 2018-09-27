@@ -324,7 +324,7 @@ Route : / API/INCIDENT
   | hazard | String | Description of the hazard |
   | risk | integer | Risk rating on a scale from 1 to 5 (where 5 is highest) |
   | control | string | Description of what has been done to mitigate the risk |
-  | daily | string | is this risk to appear on the dashboard for the risks of the day, 'true' or 'false'
+  | daily | string | Is this risk to appear on the dashboard for the risks of the day, 'true' or 'false'
   
 ### Meetings
   | Column Name | Data Type | Purpose |
