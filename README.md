@@ -323,14 +323,14 @@ Route : / API/INCIDENT
   | id | Integer | Unique identifier for each user |
   | hazard | String | Description of the hazard |
   | risk | integer | Risk rating on a scale from 1 to 5 (where 5 is highest) |
-  | control| string | Description of what has been done to mitigate the risk |
+  | control | string | Description of what has been done to mitigate the risk |
   | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
   
 ### Meetings
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
-  | datetime | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |  
+  | date_time | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |  
   | location | string | Location of where the meeting was held | 
   | issues | string | Text report of issues identified | 
   
