@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-    return knex.schema.createTableIfNotExists('incidents', table => {
+    return knex.schema.createTable('incidents', table => {
       table.increments('id')
       table.integer('user_id')
       table.string('person_involved')
@@ -16,5 +16,5 @@ exports.up = function(knex, Promise) {
   };
   
   exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists('incidents')
+    return knex.schema.dropTable('incidents')
   };
