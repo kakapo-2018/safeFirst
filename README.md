@@ -38,7 +38,7 @@ Stretch
 | --- | --- | --- | --- | --- |
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
-| Get | /api/dashboard | Yes | List of hazards relevant for the current day | Array of Objects (object = Hazard) |
+| Get | /api/dashboard | Yes | List of hazards relevant for the current day (daily set to true)| Array of Objects (object = Hazard) |
 | Get | /api/dashboard | Yes | Statistics TBD | TBD |
 | Get | /api/hsmeeting | Yes | List of hazards where 'daily' is set to 'false' | Array of Objects (object = hazard) |
 | Post | /api/hsmeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
