@@ -117,6 +117,16 @@ Stretch
   | location | string | Location of where the incident happened (free text field) |
   | firstaid | boolean | Has first aid been administered true of false |
   
+### Hazards
+  | Column Name | Data Type | Purpose |
+  | --- | --- | --- |
+  | id | Integer | Unique identifier for each user |
+  | user_id | integer | user_id of the person who is currently logged in |
+  | hazard | String | Description of the hazard |
+  | risk | integer | Risk rating on a scale from 1 to 5 (where 5 is highest) |
+  | control| string | Description of what has been done to mitigate the risk |
+  | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
+  |  
 
 
 
