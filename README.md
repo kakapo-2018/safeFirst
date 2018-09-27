@@ -308,7 +308,8 @@ Route : / API/INCIDENT
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
   | user_id | integer | user_id of the person who is currently logged in |
-  | incident_type | String | The type of incident |
+  | person_involved | string | the user who is involved in the incident, lookup to user table |
+  | incident_type | String | The type of incident, defined list: 'Near miss', 'Accident', 'Injury' |
   | date_time | string | The date and time the incident took place (YYYY-MM-DD HH:MM) |
   | task| string | The task performed when the incident occured (dropdown) |
   | other_task| string | The task performed when the incident occured (free text field) |
