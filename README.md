@@ -31,12 +31,33 @@ Richard<br>
 
 ## User Stories
 
-MVP </br>
-Stretch
+MVP <br>
+Client wishes to use the digital application that will help improve administration of;
+- Safety Meetings,
+- Hazard Identification,
+- Daily Pre-Start Meeting, and
+- Incident/Accident reporting
+for the purpose of their HSE obligations.
+
+Stretch <br>
+1. Link database to make it accessible to stakeholders for anaylsis and auditing purposes.
+2. Have a feature that maps and can track the positioning of employees that are in a high risk situation or an isolated location.
+3. Database that stores background information in pdf or jpeg format;
+- Company policies
+- Principal/Owner policies
+- Location maps and accurate GPS points for high risk tasks
+- The HSE Act 2015
+- Industry based Code of Practice 
 
 
 ## Views (client side)
-
+1. Landing, with login and register links/buttons in Nav bar.
+2. Login - Form, username and password fields and submit button.
+3. Register - Form, username and password creation, and email fields and submit button.
+4. Dashboard - div showing the most significant hazards for that day. div thats shows graphs of incident and accident trends. Also has buttons for Safety Meeting Daily Pre-Start Meeting Incident / Accident.
+5. Safety Meeting - Form with an add hazard button to show a new form field to fill for hazards that has arisen and submit button.
+6. Daily Pre-Start Meeting - Form field with an add hazard button to show a new form field to fill for hazards that has arisen and submit button.
+7. Incident / Accident - Form field and submit button.  
 
 
 ## Reducers (client side)
