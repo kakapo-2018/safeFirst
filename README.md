@@ -73,11 +73,13 @@ Stretch
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a User | The Users JWT Token |
 | Get | /api/dashboard | Yes | List of hazards relevant for the current day | Array of Objects (object = Hazard) |
+| Get | /api/dashboard | Yes | Statistics TBD | TBD |
+| Get | /api/hsmeeting | Yes | List of hazards where 'daily' is set to 'false' | Array of Objects (object = hazard) |
 | Post | /api/hsmeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
-| Post | /api/hsmeeting | Yes | ?????? | ?????? |
-| Post | /api/lost | Yes | Add a Lost pet to the db | The Pet that was added (as an object) |
-| Post | /api/lost | Yes | Add a Found pet to the db | The Pet that was added (as an object) |
-
+| Post | /api/hsmeeting | Yes | Add a new meeting minute | The minute that was added (as an object) |
+| Post | /api/dailymeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
+| Post | /api/incident | Yes | Add new incident | The incident that was added (as an object) |
+| Get | /api/incident | Yes | List of all incidents raised | Array of Objects (object = incident) |
 
 # DB (server)
 
@@ -128,7 +130,7 @@ Stretch
   | control| string | Description of what has been done to mitigate the risk |
   | daily | boolean | is this risk to appear on the dashboard for the risks of the day, true or false
   
-### Hsmeeting
+### Meeting
   | Column Name | Data Type | Purpose |
   | --- | --- | --- |
   | id | Integer | Unique identifier for each user |
@@ -136,10 +138,6 @@ Stretch
   | location | string | Location of where the meeting was held | 
   | issues | string | Text report of issues identified | 
   
-  
-
-
-
 # Setup
 
 Run the following commands in your terminal:
