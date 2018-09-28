@@ -246,7 +246,7 @@ Route : / API/HSMEETING
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "hazard": "Sunburn",
 "risk": "We are working through summer, there is a risk of sunburn",
 "control": "Wear SPF50, hat, sunglasses and long sleeve clothing if needed",
@@ -259,7 +259,7 @@ Route : / API/DAILYMEETING
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "hazard": "Sunburn",
 "risk": "We are working through summer, there is a risk of sunburn",
 "control": "Wear SPF50, hat, sunglasses and long sleeve clothing if needed",
@@ -271,7 +271,7 @@ Route : / API/INCIDENT
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "user_id": "Sunburn",
 "incident_type": "Near Miss",
 "datetime": "2018-09-26 15:30",
