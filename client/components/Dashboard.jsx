@@ -1,10 +1,32 @@
 import React from 'react'
+import SafetyMeet from './SafetyMeet'
+import HazardForm from './HazardForm'
+import IncidentForm from './IncidentForm'
+import HazardsDay from './HazardsDay'
+import Header from './Header'
 
 const Dashboard = (props) => (
         <div>
             <h1>
-                I am a dashboard, make SafetyMeet, HazardsDay and Incident button. list significant hazards for that day. show incident trends in graph format. 
+
+                I am a dashboard.
+
             </h1>
+            <h2>
+              <SafetyMeet />
+             </h2>
+            <h3>
+              <HazardForm />
+            </h3>
+            <h4>
+              <IncidentForm />
+            </h4>
+            <h5>
+              <HazardsDay />
+            </h5>
+            <h6>
+              <Header />
+            </h6>
         </div>
 
 )
