@@ -32,6 +32,7 @@ import React from 'react'
 //     }
 // }
 
+
 const HazardForm = (props) => (
         <div>
             <h1>

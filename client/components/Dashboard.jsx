@@ -8,7 +8,9 @@ import Header from './Header'
 const Dashboard = (props) => (
         <div>
             <h1>
+
                 I am a dashboard.
+
             </h1>
             <h2>
               <SafetyMeet />
