@@ -22,7 +22,12 @@ class HazardForm extends React.Component {
 
     render() {
         return (
-            
+            <div>
+                <h1>HAZARD ID FORM</h1>
+                <form>
+
+                </form>
+            </div>
         )
     }
 }

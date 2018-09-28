@@ -1,5 +1,6 @@
 import React from 'react'
 
+/*
 class SafetyForm extends React.Component {
     constructor(props) {
         super(props)
@@ -67,7 +68,7 @@ class SafetyForm extends React.Component {
         )
     }
 }
-
+*/
 
 const SafetyMeet = (props) => (
         <div>
