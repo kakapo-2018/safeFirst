@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Header = (props) => (
+const Dailymeeting = (props) => (
         <div>
             <h1>
-                Header
+                I am a header
             </h1>
         </div>
 
 )
     
-export default Header
+export default Dailymeeting
