@@ -5,7 +5,7 @@ This application is a resource that will assist contractors with administration 
 The application will cover the following;
 - Safety Meetings, 
 - Hazard Identification and Control, 
-- Daily Pre-Start Meetings, and 
+- Daily Tailgate Meetings, and 
 - Near miss / Accident reporting
 
 
@@ -31,32 +31,49 @@ Richard<br>
 
 ## User Stories
 
-MVP<br> 
-1. User can use this application by filling out a digital form to;
-- take minutes for a safety meeting and identify hazards
-- take miniutes for a pre-start meeting and add any new hazards
-- file an incident/accident
-2. User dashboard that displays 
-- a list of most significant hazards for that day
-- a statistical graph of incident and accident trends
+MVP <br>
+Client wishes to use the digital application that will help improve administration of;
+- Safety Meetings,
+- Hazard Identification,
+- Daily Pre-Start Meeting, and
+- Incident/Accident reporting
+for the purpose of their HSE obligations.
 
-Stretch<br>
-- all files stored for anaylsis and auditing purposes by stakeholders
-- stakeholder e.g Principal, or Worksafe NZ has an admin access
-- 
-
+Stretch <br>
+1. Link database to make it accessible to stakeholders for anaylsis and auditing purposes.
+2. Have a feature that maps and can track the positioning of employees that are in a high risk situation or an isolated location.
+3. Database that stores background information in pdf or jpeg format;
+- Company policies
+- Principal/Owner policies
+- Location maps and accurate GPS points for high risk tasks
+- The HSE Act 2015
+- Industry based Code of Practice 
 
 
 ## Views (client side)
-
+1. Landing, with login and register links/buttons in Nav bar.
+2. Login - Form, username and password fields and submit button.
+3. Register - Form, username and password creation, and email fields and submit button.
+4. Dashboard - div showing the most significant hazards for that day. div thats shows graphs of incident and accident trends. Also has buttons for Safety Meeting Daily Pre-Start Meeting Incident / Accident.
+5. Safety Meeting - Form with an add hazard button to show a new form field to fill for hazards that has arisen and submit button.
+6. Daily Pre-Start Meeting - Form field with an add hazard button to show a new form field to fill for hazards that has arisen and submit button.
+7. Incident / Accident - Form field and submit button.  
 
 
 ## Reducers (client side)
-
+We will need reducers for displaying a list of Registered incidents on the Incident form page.
+The information will be take from the information the registered user has has given on the Incident form page.
+When we click Add button on Daily Meeting Page, we will need to be able to take a hazard from the hazards table by filtering .
+We will need to be able to control the authentication side in terms of Logging In or Registering. this will involve cases for login request, login success, login failure, register request and register failure.
 
 
 ## Actions (client side)
-
+We will need actions for adding hazards to the hazard identification for the H & S Safety Meeting Page.
+When will click on Add button on Daily Meeting Page, afer we have filtered information from Hazards table, it will be added to Daily Meeting Page.
+We will need actions for login logout and register.
+Login will have export functions for receivelogin, loginError andloginUser and also a function for requestlogin.
+logout will have an export function for logoutUser and functions for requestLogout and receiveLogout.
+Register wil have an export function for registerUserRequest.
 
 
 ## API (client - server)
@@ -72,7 +89,7 @@ Stretch<br>
 | Post | /api/hsmeeting/minute | Yes | Add a new meeting minute | The minute that was added (as an object) |
 | Post | /api/dailymeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
 | Post | /api/incident | Yes | Add new incident | The incident that was added (as an object) |
-| Get | /api/incident | Yes | List of all incidents raised | Array of Objects (object = incident) |
+| Get | /api/incidents | Yes | List of all incidents raised | Array of Objects (object = incident) |
 
 ## API Documentation
 
@@ -229,7 +246,7 @@ Route : / API/HSMEETING
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "hazard": "Sunburn",
 "risk": "We are working through summer, there is a risk of sunburn",
 "control": "Wear SPF50, hat, sunglasses and long sleeve clothing if needed",
@@ -242,7 +259,7 @@ Route : / API/DAILYMEETING
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "hazard": "Sunburn",
 "risk": "We are working through summer, there is a risk of sunburn",
 "control": "Wear SPF50, hat, sunglasses and long sleeve clothing if needed",
@@ -254,7 +271,7 @@ Route : / API/INCIDENT
 
 (body) - an object:
 ```sh
-{"id": 1,
+{
 "user_id": "Sunburn",
 "incident_type": "Near Miss",
 "datetime": "2018-09-26 15:30",
