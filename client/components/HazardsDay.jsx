@@ -3,7 +3,7 @@ import React from 'react'
 const HazardsDay = (props) => (
         <div>
             <h1>
-                I am daily meetings page
+                I am daily pre-start meeting page
             </h1>
         </div>
 
