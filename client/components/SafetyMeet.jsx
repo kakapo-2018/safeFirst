@@ -27,6 +27,9 @@ class SafetyMeet extends React.Component {
                     Attendees:
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </lable>
+                <br/>
+                <Link to="/hsmeetinglist" className={'navoptions'}>List with all Safety Meetings notes</Link>
+                <hr />
             </form>
         )
     }
@@ -34,4 +37,6 @@ class SafetyMeet extends React.Component {
 
 
 export default SafetyMeet
+
+
 
