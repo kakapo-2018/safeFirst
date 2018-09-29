@@ -36,7 +36,7 @@ import React from 'react'
 const HazardForm = (props) => (
         <div>
             <h1>
-                I am a Hazard Form
+                HazardForm
             </h1>
         </div>
 

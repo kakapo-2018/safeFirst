@@ -72,7 +72,7 @@ import React from 'react'
 const SafetyMeet = (props) => (
         <div>
             <h1>
-                I am a safety meeting
+                SafetyMeet
             </h1>
         </div>
 
