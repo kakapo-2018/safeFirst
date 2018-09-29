@@ -1,12 +1,26 @@
 import React from 'react'
+import Header from './Header'
+import SafetyMeet from './SafetyMeet'
+import HazardIn from './HazardIn'
 
-const Hsmeeting = (props) => (
+class Dashboard extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+      return ( 
         <div>
-            <h1>
-                I am a header
-            </h1>
+          <div>
+            <Header />
+          </div>
+          <div>
+            <SafetyMeet />
+            <HazardIn />
+          </div>
         </div>
-
-)
-    
-export default Hsmeeting
+  ) 
+}
+}
+ 
+export default Dashboard

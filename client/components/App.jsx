@@ -28,10 +28,7 @@ class App extends React.Component {
           <Router>  
             <div>
               <div>
-                {/* {!this.props.auth.isAuthenticated ?
-                  <Route exact path="/" component={Nav} /> :  */}
-                  <Route exact path="/dashboard" component={Header} /> 
-                {/* } */}
+                <Route exact path="/" component={Nav} />             
               </div> 
               <div>
                 {/* {!this.props.auth.isAuthenticated ?

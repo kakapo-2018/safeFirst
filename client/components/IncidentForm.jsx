@@ -3,7 +3,7 @@ import React from 'react'
 const IncidentForm = (props) => (
         <div>
             <h1>
-                I am a incident / accident form
+                IncidentForm
             </h1>
         </div>
 

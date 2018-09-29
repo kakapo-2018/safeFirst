@@ -1,15 +1,26 @@
 import React from 'react'
+import Header from './Header'
+import HazardsDay from './HazardsDay'
+import Statistics from './Statistics'
 
-const Dashboard = (props) => (
+class Dashboard extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+      return ( 
         <div>
-            <h1>
-                Dashboard
-            </h1>
-            <h3>
-                TESTING                 
-            </h3>
+          <div>
+            <Header />
+          </div>
+          <div>
+            <HazardsDay />
+            <Statistics />
+          </div>
         </div>
-
-)
-    
+  ) 
+}
+}
+ 
 export default Dashboard

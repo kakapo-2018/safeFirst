@@ -3,7 +3,7 @@ import React from 'react'
 const Statistics = (props) => (
         <div>
             <h1>
-                I am a statistic thingy
+                Statistics
             </h1>
         </div>
 
