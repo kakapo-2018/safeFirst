@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const IncidentList = (props) => (
         <div>
             <h1>
