@@ -87,6 +87,7 @@ Register wil have an export function for registerUserRequest.
 | Get | /api/hsmeeting | Yes | List of hazards where 'daily' is set to 'false' | Array of Objects (object = hazard) |
 | Post | /api/hsmeeting/hazard | Yes | Add a new hazard | The hazard that was added (as an object) |
 | Post | /api/hsmeeting/minute | Yes | Add a new meeting minute | The minute that was added (as an object) |
+| Get | /api/hsmeetinglist | Yes | List of meeting minutes | Array of Objects (object = meeting minute) |
 | Post | /api/dailymeeting | Yes | Add a new hazard | The hazard that was added (as an object) |
 | Post | /api/incidents | Yes | Add new incident | The incident that was added (as an object) |
 | Get | /api/incidents | Yes | List of all incidents raised | Array of Objects (object = incident) |
