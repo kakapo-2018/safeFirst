@@ -3,28 +3,44 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
-import Nav from './Nav'
 import Dashboard from './Dashboard'
 import Landing from './Landing'
+import Incidents from './Incidents'
+import Hsmeeting from './Hsmeeting'
+import Dailymeeting from './Dailymeeting'
+import Nav from './Nav'
+import Header from './Header'
 
 class App extends React.Component {
     constructor(props) {
       super(props)
     }
 
+
+// When NOT logged in, show the following components: Nav & Landing
+// When logged in, show the following components: Header & Dashboard
+
+// Authentication commented out below as currently not working
+
+
     render() {
         return ( 
           <Router>  
-            
-              
-            <div className=''>
-            <Nav />
-                {!this.props.auth.isAuthenticated ?
-                  <Route exact path="/" component={Landing} /> : 
-                  <Route exact path="/" component={Dashboard} /> 
-                }
+            <div>
+              <div>
+                <Route exact path="/" component={Nav} />             
+              </div> 
+              <div>
+                {/* {!this.props.auth.isAuthenticated ?
+                  <Route exact path="/" component={Landing} /> :  */}
+                  <Route exact path="/dashboard" component={Dashboard} /> 
+                {/* } */}
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
+                <Route path="/incidents" component={Incidents} />
+                <Route path="/hsmeeting" component={Hsmeeting} />
+                <Route path="/dailymeeting" component={Dailymeeting} />
+              </div>
             </div>
           </Router>
     ) 

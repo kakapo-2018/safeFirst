@@ -42,5 +42,7 @@ render()    {
         </form>
     ) 
 }
+
+)
     
 export default HazardsDay
