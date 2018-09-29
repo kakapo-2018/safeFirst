@@ -1,7 +1,6 @@
 import React from 'react'
 import {getHazards} from '../utils/apiclient.js'
 
-
 export default class HazardsDay extends React.Component {
     constructor(props) {
         super(props)
@@ -47,5 +46,6 @@ export default class HazardsDay extends React.Component {
         }
         </div>
     )}
+
 }
 
