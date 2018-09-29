@@ -2,6 +2,7 @@ import React from 'react'
 import {getIncidents} from '../utils/apiclient.js'
 
 
+
 export default class IncidentList extends React.Component {
     constructor(props) {
         super(props)
