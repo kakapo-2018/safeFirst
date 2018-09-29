@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {} from './'
 
 
 class HazardsDay extends React.Component    {
@@ -9,28 +11,34 @@ class HazardsDay extends React.Component    {
             Risk: '',
             Control: '',
             Date: ''
-         } 
-        this.handleSubmit = this.onSubmit.bind(this);
-        this.onsubmit = this.onsubmit.bind(this); 
+        } 
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onSubmit = this.onSubmit.bind(this); 
         }
-        componentDidMount()
     }
 
-handleSubmit();  {
+    componentDidMount() 
 
-}
 
-onsubmit();  {
-    e.preventDefault()
-    console.log(this.state);
-}
+    handleSubmit(evt)  {
+        evt.preventDefault();
+        //alert('Daily meeting hazard submitted: ' + this.state.value);
+        this.props.dispatch(evt)
+    }
+
+    onSubmit(evt)  {
+        evt.preventDefault();
+        console.log(this.state);
+        this.setState({value: event.target.value});
+    }
 
 render();    {
     return  (
         <div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <label className = "label">Hazard:
-            <input className="input" type="text" name="Hazard">
+            <input className="input" type="text" name="Hazard"
+            >
             </input>
             </label>
 
@@ -49,7 +57,7 @@ render();    {
             </input>
             </label>
             
-            <input className="button" type="submit" name="Add">
+            <input className="button" type="submit" name="Add" onclick={this.}>
             </input>
         </form>
         </div>
