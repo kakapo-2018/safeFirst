@@ -1,12 +1,51 @@
 import React from 'react'
+import {getHazards} from '../utils/apiclient.js'
 
-const HazardsDay = (props) => (
-        <div>
-            <h1>
-                I am daily pre-start meeting page
-            </h1>
-        </div>
-
-)
+export default class HazardsDay extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            hazards: [],
+            errorMessage: ''
+        }
+        this.fetchHazards = this.fetchHazards.bind(this)
+    }
     
-export default HazardsDay
+    componentDidMount() {
+        this.fetchHazards()
+    }
+
+    fetchHazards () {
+        getHazards()
+        .then(hazards => {
+            this.setState({hazards: hazards})
+        })
+        .catch(err => {
+            this.setState({errorMessage: err.message})
+       })
+    }
+
+    render() {
+        console.log('render', this.state.hazards.length)
+        console.log()
+        
+      return (
+        <div>
+            {
+                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                    return (
+                    <div>
+                        <p>Hazard: {hazard.hazard}</p>
+                        <p>Risk: {hazard.risk}</p>
+                        <p>Control: {hazard.control}</p>
+                        <br />
+                        <hr />
+                    </div>
+                    )    
+        })
+        }
+        </div>
+    )}
+
+}
+

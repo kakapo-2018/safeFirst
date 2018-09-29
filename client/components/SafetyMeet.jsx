@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 
 class SafetyMeet extends React.Component {
@@ -32,3 +34,4 @@ class SafetyMeet extends React.Component {
 
 
 export default SafetyMeet
+

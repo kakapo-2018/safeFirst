@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from './Header'
-import HazardsDay from './HazardsDay'
-import Statistics from './Statistics'
+import SafetyMeetList from './SafetyMeetList'
 
-class Dashboard extends React.Component {
+
+class SafetyMeetContainer extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -15,15 +15,12 @@ class Dashboard extends React.Component {
             <Header />
           </div>
           <div>
-          <hr />
-            <HazardsDay />
             <hr />
-            <Statistics />
-            <hr />
+            <SafetyMeetList />
           </div>
         </div>
   ) 
 }
 }
  
-export default Dashboard
+export default SafetyMeetContainer

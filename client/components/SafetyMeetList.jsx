@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Statistics = (props) => (
+const SafetyMeetList = (props) => (
         <div>
             <h1>
-                Statistics
+                SafetyMeetList
             </h1>
         </div>
 
 )
     
-export default Statistics
+export default SafetyMeetList
