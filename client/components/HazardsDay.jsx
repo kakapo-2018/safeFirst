@@ -1,21 +1,13 @@
 import React from 'react'
 
-const HazardsDay = (props) => (
-    <div>
-        <h1>
-            I am daily pre-start meeting page
-        </h1>
-    </div>
-
 
 class HazardsDay extends React.Component    {
     constructor(props)  {
         super(props)
-        this.state = {
-            
+        this.state = {value: } 
+        this.handleSubmit = this.onSubmit.bind(this);
         }
     }
-}
 
 onsubmit()  {
     e.preventDefault()
@@ -24,20 +16,31 @@ onsubmit()  {
 
 render()    {
     return  (
-        <form onSubmit={}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <label>Hazard:
             <input className="input" type="text" name="Hazard">
             </input>
+            </label>
+
+            <label>Risk:
             <input className="input" type="text" name="Risk">
             </input>
+            </label>
+
+            <label>Control:
             <input className="input" type="text" name="Control">
             </input>
+            </label>
+            
+            <label>Date:
             <input className="input" type="text" name="Date">
             </input>
-            <input className="button" type="submit">
+            </label>
+            
+            <input className="button" type="submit" name="Add">
             </input>
         </form>
     ) 
-}
 }
     
 export default HazardsDay
