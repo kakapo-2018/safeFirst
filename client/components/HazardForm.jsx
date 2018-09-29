@@ -1,47 +1,60 @@
 import React from 'react'
 
-// class HazardForm extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             crew: '',
-//             hazard: '',
-//             risk: 1,
-//             control: ''
-//         }
-//         this.handleChange = this.handleChange.bind(this)
-//         this.handleSubmit = this.handleSubmit.bind(this)
-//     }
-//     handleChange(event) {
-//         this.setState({value: event.target.name})
-//     }
-//     handleSubmit(event) {
-//         alert('A name was submitted: ' + this.state.value)
-//         event.preventDefault()
-//     }
 
-//     render() {
-//         return (
-//             <div>
-//                 <h1>HAZARD ID FORM</h1>
-//                 <form>
+class HazardsDay extends React.Component    {
+    constructor(props)  {
+        super(props)
+        this.state = {
+            Hazard: '',
+            Risk: '',
+            Control: '',
+            Date: ''
+         } 
+        this.handleSubmit = this.onSubmit.bind(this);
+        this.onsubmit = this.onsubmit.bind(this); 
+        }
+        componentDidMount()
+    }
 
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
+handleSubmit();  {
 
+}
 
-const HazardForm = (props) => (
+onsubmit();  {
+    e.preventDefault()
+    console.log(this.state);
+}
+
+render();    {
+    return  (
         <div>
-            <h1>
-                HazardForm
-            </h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <label className = "label">Hazard:
+            <input className="input" type="text" name="Hazard">
+            </input>
+            </label>
+
+            <label className = "label">Risk:
+            <input className="input" type="text" name="Risk">
+            </input>
+            </label>
+
+            <label className = "label">Control:
+            <input className="input" type="text" name="Control">
+            </input>
+            </label>
+            
+            <label className = "label">Date:
+            <input className="input" type="text" name="Date">
+            </input>
+            </label>
+            
+            <input className="button" type="submit" name="Add">
+            </input>
+        </form>
         </div>
-
-)
-
+    ) 
+}
 
     
-export default HazardForm
+export default HazardsDay
