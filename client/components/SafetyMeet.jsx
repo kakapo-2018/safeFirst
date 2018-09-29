@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 // class SafetyForm extends React.Component {
 //     constructor(props) {
@@ -72,7 +73,11 @@ import React from 'react'
 const SafetyMeet = (props) => (
         <div>
             <h1>
+                <hr />
                 SafetyMeet
+
+                <Link to="/hsmeetinglist" className={'navoptions'}>List with all Safety Meetings notes</Link>
+                <hr />
             </h1>
         </div>
 

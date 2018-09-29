@@ -1,48 +1,51 @@
 import React from 'react'
+import {getHazards} from '../utils/apiclient.js'
 
-
-class HazardsDay extends React.Component    {
-    constructor(props)  {
+export default class HazardsDay extends React.Component {
+    constructor(props) {
         super(props)
-        this.state = {value: } 
-        this.handleSubmit = this.onSubmit.bind(this);
+        this.state = {
+            hazards: [],
+            errorMessage: ''
         }
+        this.fetchHazards = this.fetchHazards.bind(this)
+    }
+    
+    componentDidMount() {
+        this.fetchHazards()
     }
 
-onsubmit()  {
-    e.preventDefault()
-    console.log(this.state);
+    fetchHazards () {
+        getHazards()
+        .then(hazards => {
+            this.setState({hazards: hazards})
+        })
+        .catch(err => {
+            this.setState({errorMessage: err.message})
+       })
+    }
+
+    render() {
+        console.log('render', this.state.hazards.length)
+        console.log()
+        
+      return (
+        <div>
+            {
+                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                    return (
+                    <div>
+                        <p>Hazard: {hazard.hazard}</p>
+                        <p>Risk: {hazard.risk}</p>
+                        <p>Control: {hazard.control}</p>
+                        <br />
+                        <hr />
+                    </div>
+                    )    
+        })
+        }
+        </div>
+    )}
+
 }
 
-render()    {
-    return  (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Hazard:
-            <input className="input" type="text" name="Hazard">
-            </input>
-            </label>
-
-            <label>Risk:
-            <input className="input" type="text" name="Risk">
-            </input>
-            </label>
-
-            <label>Control:
-            <input className="input" type="text" name="Control">
-            </input>
-            </label>
-            
-            <label>Date:
-            <input className="input" type="text" name="Date">
-            </input>
-            </label>
-            
-            <input className="button" type="submit" name="Add">
-            </input>
-        </form>
-    ) 
-}
-
-)
-    
-export default HazardsDay
