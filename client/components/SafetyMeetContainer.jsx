@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from './Header'
-import SafetyMeet from './SafetyMeet'
-import HazardIn from './HazardIn'
+import SafetyMeetList from './SafetyMeetList'
 
-class Hsmeeting extends React.Component {
+
+class SafetyMeetContainer extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -15,12 +15,12 @@ class Hsmeeting extends React.Component {
             <Header />
           </div>
           <div>
-            <SafetyMeet />
-            <HazardIn />
+            <hr />
+            <SafetyMeetList />
           </div>
         </div>
   ) 
 }
 }
  
-export default Hsmeeting
+export default SafetyMeetContainer

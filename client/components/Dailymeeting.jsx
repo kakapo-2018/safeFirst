@@ -13,6 +13,7 @@ class Dailymeeting extends React.Component {
         <div>
           <div>
             <Header />
+            <hr />
           </div>
           <div>
             <HazardForm />

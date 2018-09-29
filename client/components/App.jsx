@@ -10,6 +10,7 @@ import Hsmeeting from './Hsmeeting'
 import Dailymeeting from './Dailymeeting'
 import Nav from './Nav'
 import Header from './Header'
+import SafetyMeetContainer from './SafetyMeetContainer'
 
 class App extends React.Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class App extends React.Component {
                 <Route path="/register" component={Register} />
                 <Route path="/incidents" component={Incidents} />
                 <Route path="/hsmeeting" component={Hsmeeting} />
+                <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
                 <Route path="/dailymeeting" component={Dailymeeting} />
               </div>
             </div>

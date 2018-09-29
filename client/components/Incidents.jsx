@@ -3,7 +3,7 @@ import Header from './Header'
 import IncidentForm from './IncidentForm'
 import IncidentList from './IncidentList'
 
-class Dashboard extends React.Component {
+class Incidents extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -15,7 +15,9 @@ class Dashboard extends React.Component {
             <Header />
           </div>
           <div>
+            <hr />
             <IncidentForm />
+            <hr />
             <IncidentList />
           </div>
         </div>
@@ -23,4 +25,4 @@ class Dashboard extends React.Component {
 }
 }
  
-export default Dashboard
+export default Incidents

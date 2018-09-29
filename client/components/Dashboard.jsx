@@ -15,8 +15,11 @@ class Dashboard extends React.Component {
             <Header />
           </div>
           <div>
+          <hr />
             <HazardsDay />
+            <hr />
             <Statistics />
+            <hr />
           </div>
         </div>
   ) 
