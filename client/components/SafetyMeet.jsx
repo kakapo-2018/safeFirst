@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {getMinutes} from '../utils/apiclient'
 
 
 
@@ -7,17 +8,29 @@ class SafetyMeet extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            value: ''
+            id: '',
+            date_time: '',
+            location: '',
+            issues: ''
+            
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.refreshForm = this.refreshForm.bind(this)
     }
     handleChange(event) {
-        this.setState({value: event.target.name})
+        this.setState({[event.target.name]: event.target.value})
     }
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value)
         event.preventDefault()
+        getMinutes(this.state)
+        console.log(this.state)
+
+    }
+
+    refreshForm() {
+        this.setState({})
+        this.render()
     }
 
     render() {
@@ -26,21 +39,21 @@ class SafetyMeet extends React.Component {
             <h1>Safety Meeting</h1>
                 <div class="field">
                     <label class="label">Date - Time:   </label>
-                        <  input class="input" type="text" value={this.state.value} />
+                        <  input class="input" type="text" name="date_time" onChange={this.handleChange} />
                 </div>
                 <div class="field">
                     <label class="label">Attendees:   </label>
-                        <  input class="input" type="text" value={this.state.value} />
+                        <  input class="input" type="text" name="id" onChange={this.handleChange} />
                 </div>
                 <div class="field">
                     <label class="label">Location:   </label>
-                        <  input class="input" type="text" value={this.state.value} />
+                        <  input class="input" type="text" name="location" onChange={this.handleChange} />
                 </div>
                 <div class="field">
                     <label class="label">Discussion:</label>
                     <p>Health & Safety concerns, training needs, incidents/accident trends, personal   </p>
                         <div class="control">
-                            <textarea class="textarea" rows="15" column="100" value={this.state.value}></textarea>
+                            <textarea class="textarea" name="issues" rows="15" column="100" onChange={this.handleChange}></textarea>
                         </div>
                 </div>
                 <div class="field is-grouped">
