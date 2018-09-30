@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {} from './'
+//import {connect} from 'react-redux'
+import {getHazards} from '../utils/apiclient'
 
 
 class HazardForm extends React.Component    {
@@ -12,22 +12,21 @@ class HazardForm extends React.Component    {
             Control: '',
             Date: ''
         } 
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.onSubmit = this.onSubmit.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+        this.refreshForm = this.refreshForm.bind(this)
         }
-    }
+    
 
-
-    handleSubmit(evt)  {
-        evt.preventDefault();
-        //alert('Daily meeting hazard submitted: ' + this.state.value);
-        this.props.dispatch(evt)
-    }
 
     onSubmit(evt)  {
-        evt.preventDefault();
-        console.log(this.state);
-        //this.setState({value: event.target.value});
+        this.setState({[evt.target.name]: evt.target.value})
+    }
+
+    handleSubmit(evt)  {
+        evt.preventDefault()
+        getHazards(this.state)
+        console.log(this.state)
     }
 
     refreshForm()   {
@@ -36,36 +35,38 @@ class HazardForm extends React.Component    {
         this.render()
     }
 
-render();    {
-    return  (
-        <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label className = "label">Hazard:
-            <input className="input" type="text" name="Hazard"
-            >
-            </input>
-            </label>
+    render()    {
+        return  (
+            <form onSubmit={this.handleSubmit}>
+                <label className = "label">Hazard:
+                <input className="input" type="text" name="Hazard" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <label className = "label">Risk:
+                <input className="input" type="text" name="Risk" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
 
-            <label className = "label">Risk:
-            <input className="input" type="text" name="Risk">
-            </input>
-            </label>
-
-            <label className = "label">Control:
-            <input className="input" type="text" name="Control">
-            </input>
-            </label>
-            
-            <label className = "label">Date:
-            <input className="input" type="text" name="Date">
-            </input>
-            </label>
-            
-            <input className="button" type="submit" name="Add" onclick={this.}>
-            </input>
-        </form>
-        </div>
-    ) 
+                <label className = "label">Control:
+                <input className="input" type="text" name="Control" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <label className = "label">Date:
+                <input className="input" type="text" name="Date" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <input className="button" type="submit" name="Add">
+                </input>
+            </form>
+        ) 
+    }
 }
 
     
