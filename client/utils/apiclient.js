@@ -23,3 +23,25 @@ export function getIncidents() {
         throw Error('You need to implement an API route for /api/incidents')
     })
 }
+
+export function getMinutes() {
+    return request
+    .get('/api/hsmeetinglist')
+    .then(res => {
+        const minutes = res.body
+        return minutes
+    })
+    .catch(() => {
+        throw Error('You need to implement an API route for /api/hsmeetinglist')
+    })
+}
+
+export function newIncident (incident, callback) {
+    console.log(incident)
+    request
+    .post('api/incidents')
+    .send(incident)
+    .end((err, res) => {
+        callback(err,res)
+    })    
+}
