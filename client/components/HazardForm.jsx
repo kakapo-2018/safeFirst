@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {} from './'
 
 
-class HazardsDay extends React.Component    {
+class HazardForm extends React.Component    {
     constructor(props)  {
         super(props)
         this.state = {
@@ -17,8 +17,6 @@ class HazardsDay extends React.Component    {
         }
     }
 
-    componentDidMount() 
-
 
     handleSubmit(evt)  {
         evt.preventDefault();
@@ -29,7 +27,13 @@ class HazardsDay extends React.Component    {
     onSubmit(evt)  {
         evt.preventDefault();
         console.log(this.state);
-        this.setState({value: event.target.value});
+        //this.setState({value: event.target.value});
+    }
+
+    refreshForm()   {
+        this.setState({
+        })
+        this.render()
     }
 
 render();    {
@@ -65,4 +69,4 @@ render();    {
 }
 
     
-export default HazardsDay
+export default HazardForm

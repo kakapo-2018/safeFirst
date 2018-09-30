@@ -10,6 +10,7 @@ router.get('/', (req,res) => {
 
 router.post('/', (req, res) => {
     let data = req.body
+    console.log(data)
     db.postIncidents(data)
     .then(incidents => {
         res.json(incidents)
