@@ -16,8 +16,6 @@ class HazardForm extends React.Component    {
         this.onSubmit = this.onSubmit.bind(this)
         this.refreshForm = this.refreshForm.bind(this)
         }
-    
-
 
     onSubmit(evt)  {
         this.setState({[evt.target.name]: evt.target.value})
