@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {getMinutes} from '../utils/apiclient'
+// import {Link} from 'react-router-dom'
+import {newMinutes} from '../utils/apiclient'
 
 
 
@@ -11,7 +11,7 @@ class SafetyMeet extends React.Component {
             id: '',
             date_time: '',
             location: '',
-            issues: ''
+            issues: '',
             
         }
         this.handleChange = this.handleChange.bind(this)
@@ -23,8 +23,8 @@ class SafetyMeet extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault()
-        getMinutes(this.state)
-        console.log(this.state)
+        newMinutes(this.state)
+        console.log(this.state) 
 
     }
 
@@ -42,7 +42,7 @@ class SafetyMeet extends React.Component {
                         <  input class="input" type="text" name="date_time" onChange={this.handleChange} />
                 </div>
                 <div class="field">
-                    <label class="label">Attendees:   </label>
+                    <label class="label">ID:   </label>
                         <  input class="input" type="text" name="id" onChange={this.handleChange} />
                 </div>
                 <div class="field">
@@ -53,7 +53,7 @@ class SafetyMeet extends React.Component {
                     <label class="label">Discussion:</label>
                     <p>Health & Safety concerns, training needs, incidents/accident trends, personal   </p>
                         <div class="control">
-                            <textarea class="textarea" name="issues" rows="15" column="100" onChange={this.handleChange}></textarea>
+                            <textarea class="textarea" name="issues" rows="15" onChange={this.handleChange}></textarea>
                         </div>
                 </div>
                 <div class="field is-grouped">
@@ -73,16 +73,16 @@ class SafetyMeet extends React.Component {
             {/* <label>Date:
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
             </label>
-                <lable>
+                <label>
                     Attendees:
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </lable> */}
+                </label> */}
 
-                <lable>
+                {/* <label>
                 <br/>
                 <Link to="/hsmeetinglist" className={'navoptions'}>List with all Safety Meetings notes</Link>
                 <hr />
-                </lable>
+                </label> */}
             </form>
         )
     }

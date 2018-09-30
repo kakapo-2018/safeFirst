@@ -45,3 +45,15 @@ export function newIncident (incident, callback) {
         callback(err,res)
     })    
 }
+
+export function newMinutes (minute) {
+    console.log("Minute: ", minute)
+    request
+    .post('api/hsmeeting/minute')
+    .send(minute)
+    .end((err, res) => {
+        console.log('hi')
+        console.log(err, res)
+        // callback(err,res)
+    })
+}
