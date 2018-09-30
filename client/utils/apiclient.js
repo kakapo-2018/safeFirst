@@ -35,3 +35,13 @@ export function getMinutes() {
         throw Error('You need to implement an API route for /api/hsmeetinglist')
     })
 }
+
+export function newIncident (incident, callback) {
+    console.log(incident)
+    request
+    .post('api/incidents')
+    .send(incident)
+    .end((err, res) => {
+        callback(err,res)
+    })    
+}
