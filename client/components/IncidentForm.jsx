@@ -1,6 +1,6 @@
 import React from 'react'
 import {newIncident} from '../utils/apiclient'
-//import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min.js'
+
 
 class IncidentForm extends React.Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class IncidentForm extends React.Component {
         console.log(this.state)
     }
 
-    refreshForm(){
+    refreshForm(event){
         this.setState({            
         })
         this.render()
@@ -92,10 +92,6 @@ class IncidentForm extends React.Component {
                         <label className="label">Location:</label>
                         <input className="input" type="text" name="location" onChange={this.handleChange} />                    
                     </div>
-                    {/* <div className="field">
-                        <label className="label">First aid:</label>
-                        <input className="input" type="text" name="first_aid" onChange={this.handleChange} />                    
-                    </div> */}
                     <div className="control" >
                     <label className="label">First aid:</label>
                         <div className="select" >

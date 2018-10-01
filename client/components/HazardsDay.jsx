@@ -25,27 +25,44 @@ export default class HazardsDay extends React.Component {
        })
     }
 
+   
+
     render() {
         console.log('render', this.state.hazards.length)
         console.log()
         
+        // const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+        // document.write(utc);
+
+
       return (
         <div>
-            {
-                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
-                    return (
-                    <div>
-                        <p>Hazard: {hazard.hazard}</p>
-                        <p>Risk: {hazard.risk}</p>
-                        <p>Control: {hazard.control}</p>
-                        <br />
-                        <hr />
+            <div className="block">
+                <h1 className="title">Hazards for   </h1>
                     </div>
-                    )    
-        })
-        }
-        </div>
-    )}
-
-}
+                        <div className="block">
+                            <table className="table is-striped is-hoverable is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Hazard</th>
+                                        <th>Risk</th>
+                                        <th>Control</th>
+                                    </tr>
+                                </thead>
+                                    {
+                                    this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                                    return (
+                                    <tbody>
+                                        <td>{hazard.hazard}</td>
+                                        <td>{hazard.risk}</td>
+                                        <td>{hazard.control}</td>
+                                    </tbody>
+                                    )    
+                                })
+                             }
+                            </table>
+                        </div>
+                    </div>
+                )}
+            }
 
