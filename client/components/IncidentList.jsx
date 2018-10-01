@@ -32,26 +32,40 @@ export default class IncidentList extends React.Component {
         console.log()
         
       return (
-        <div>
-            {
-                this.state.incidents.length > 0 &&this.state.incidents.map((incident) => {
-                    return (
-                    <div>
-                        <p>Person involved: {incident.person_involved}</p>
-                        <p>Incident type: {incident.incident_type}</p>
-                        <p>Date and time of incident: {incident.date_time}</p>
-                        <p>Task: {incident.task}</p>
-                        <p>Other task: {incident.other_task}</p>
-                        <p>Incident: {incident.incident}</p>
-                        <p>Other incident: {incident.other_incident}</p>
-                        <p>Location: {incident.location}</p>
-                        <p>First aid: {incident.first_aid}</p>
-                        <br />
-                        <hr />
-                    </div>
-                    )    
-        })
-        }
+        <div className="block">
+            <table className="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                      <th>Person Involved</th>
+                      <th>Incident Type</th>
+                      <th>Date and Time</th>
+                      <th>Task</th>
+                      <th>Other task</th>
+                      <th>Incident</th>      
+                      <th>Other incident</th>
+                      <th>Location</th>
+                      <th>First aid</th>
+                    </tr>
+                </thead>
+                    {this.state.incidents.length > 0 &&this.state.incidents.map((incident) => {
+                        return (
+                           
+                                <tbody>
+                                    <td>{incident.person_involved}</td>
+                                    <td>{incident.incident_type}</td>
+                                    <td>{incident.date_time}</td>
+                                    <td>{incident.task}</td>
+                                    <td>{incident.other_task}</td>
+                                    <td>{incident.incident}</td>
+                                    <td>{incident.other_incident}</td>
+                                    <td>{incident.location}</td>
+                                    <td>{incident.first_aid}</td>
+                                </tbody>
+                            
+                        )    
+                    })
+                    }  
+            </table>
         </div>
     )}
 }
