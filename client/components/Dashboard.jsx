@@ -3,6 +3,8 @@ import Header from './Header'
 import HazardsDay from './HazardsDay'
 import Statistics from './Statistics'
 
+
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props)

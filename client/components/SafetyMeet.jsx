@@ -36,8 +36,8 @@ class SafetyMeet extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1>Safety Meeting</h1>
-                <div className="column is-left">
+                <h1 className="title">H&S Meeting</h1>
+                <div className="column">
                         <div className="column is-one-fifth">
                             <label className="label">Meeting ID:   </label>
                                 <input className="input" type="text" name="id" onChange={this.handleChange} />
@@ -58,13 +58,13 @@ class SafetyMeet extends React.Component {
                         </div>
                         <div className="field is-grouped">
                             <div className="control">
-                                <button className="button is-link">Submit</button>
+                                <button className="button is-link" className="button is-success">Submit</button>
                             </div>
                             <div className="control">
-                                <button className="button is-link">Cancel</button>
+                                <button className="button is-link" className="button is-danger">Cancel</button>
                             </div>
                             <div className="control">
-                                <button className="button is-link">Add Hazard</button>
+                                <button className="button is-link" className="button is-warning">Add Hazard</button>
                             </div>
                         </div>
                     </div>
