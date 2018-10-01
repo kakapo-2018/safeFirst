@@ -3,6 +3,9 @@ import Header from './Header'
 import HazardsDay from './HazardsDay'
 import Statistics from './Statistics'
 
+
+
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props)
@@ -15,12 +18,16 @@ class Dashboard extends React.Component {
             <Header />
           </div>
           <div>
-          <hr />
-            <HazardsDay />
-            <hr />
-            <Statistics />
-            <hr />
+            <DashboardHeader />
           </div>
+          <div className="dashboardcontainer">
+            <div className="left">
+              <HazardsDay />
+             </div>
+            <div className="right">
+              <Statistics />
+            </div>
+          </div>  
         </div>
   ) 
 }
