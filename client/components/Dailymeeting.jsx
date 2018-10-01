@@ -16,7 +16,7 @@ class Dailymeeting extends React.Component {
             <hr />
           </div>
           <div>
-            <HazardForm />
+            <HazardForm {...this.props} />
           </div>
         </div>
   ) 
