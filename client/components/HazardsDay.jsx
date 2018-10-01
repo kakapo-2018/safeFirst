@@ -34,10 +34,11 @@ export default class HazardsDay extends React.Component {
             {
                 this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
                     return (
-                    <div>
+                    <div key={hazard.id}>
                         <p>Hazard: {hazard.hazard}</p>
                         <p>Risk: {hazard.risk}</p>
                         <p>Control: {hazard.control}</p>
+                        <p>Date: {hazard.date}</p>
                         <br />
                         <hr />
                     </div>

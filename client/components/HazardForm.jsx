@@ -1,6 +1,6 @@
 import React from 'react'
 //import {connect} from 'react-redux'
-import {getHazards} from '../utils/apiclient'
+import {newHazard} from '../utils/apiclient'
 
 
 class HazardForm extends React.Component    {
@@ -10,7 +10,8 @@ class HazardForm extends React.Component    {
             Hazard: '',
             Risk: '',
             Control: '',
-            Date: ''
+            Date: '',
+            Daily: 'true'
         } 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -23,8 +24,10 @@ class HazardForm extends React.Component    {
 
     handleSubmit(evt)  {
         evt.preventDefault()
-        getHazards(this.state)
-        console.log(this.state)
+        newHazard(this.state, () => {
+            this.props.history.push('/dashboard')
+        })
+        // console.log(this.state)
     }
 
     refreshForm()   {
@@ -37,25 +40,25 @@ class HazardForm extends React.Component    {
         return  (
             <form onSubmit={this.handleSubmit}>
                 <label className = "label">Hazard:
-                <input className="input" type="text" name="Hazard" onchange={this.onSubmit}>
+                <input className="input" type="text" name="Hazard" onChange={this.onSubmit}>
                 </input>
                 </label>
                 <br></br>
                 
                 <label className = "label">Risk:
-                <input className="input" type="text" name="Risk" onchange={this.onSubmit}>
+                <input className="input" type="text" name="Risk" onChange={this.onSubmit}>
                 </input>
                 </label>
                 <br></br>
 
                 <label className = "label">Control:
-                <input className="input" type="text" name="Control" onchange={this.onSubmit}>
+                <input className="input" type="text" name="Control" onChange={this.onSubmit}>
                 </input>
                 </label>
                 <br></br>
                 
                 <label className = "label">Date:
-                <input className="input" type="text" name="Date" onchange={this.onSubmit}>
+                <input className="input" type="text" name="Date" onChange={this.onSubmit}>
                 </input>
                 </label>
                 <br></br>
