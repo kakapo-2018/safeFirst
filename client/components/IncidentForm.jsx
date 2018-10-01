@@ -1,5 +1,6 @@
 import React from 'react'
 import {newIncident} from '../utils/apiclient'
+//import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min.js'
 
 class IncidentForm extends React.Component {
     constructor(props) {
@@ -38,6 +39,8 @@ class IncidentForm extends React.Component {
         this.render()
     }
 
+
+
     render() {
         return (
             <div>
@@ -54,14 +57,10 @@ class IncidentForm extends React.Component {
                         <label className="label">Person involved:</label>
                         <input className="input" type="text" name="person_involved" onChange={this.handleChange} />
                     </div>
-                    <div className="field">    
-                        <label className="label">Incident type:</label>
-                        <input className="input" type="text" name="incident_type" onChange={this.handleChange} />
-                    </div>
-                    <div className="control">
+                    <div className="control" >
                     <label className="label">Incident type:</label>
-                        <div className="select">
-                            <select>
+                        <div className="select" >
+                            <select name="incident_type" onChange={this.handleChange}>
                                 <option></option>
                                 <option>Near miss</option>
                                 <option>Injury</option>
@@ -69,10 +68,10 @@ class IncidentForm extends React.Component {
                             </select>
                         </div>
                     </div>
-                    {/* <div className="field">
-                        <label className="label">Date & Time:</label>
-                        <input className="input" type="text" name="date_time" onChange={this.handleChange} />
-                    </div>  */}
+                    <div className="field">
+                        <label className="label">Date:</label>
+                        <input className="input" type="date" name="date_time" onChange={this.handleChange} />
+                    </div> 
                     <div className="field">
                         <label className="label">Task:</label>
                         <input className="input" type="text" name="task" onChange={this.handleChange} />
@@ -86,23 +85,32 @@ class IncidentForm extends React.Component {
                         <input className="input" type="text" name="incident" onChange={this.handleChange} />
                     </div>
                     <div className="field">
-                        <label className="label">Other incidident:</label>
+                        <label className="label">Other incident:</label>
                         <input className="input" type="text" name="other_incident" onChange={this.handleChange} />
                     </div>
                     <div className="field">
                         <label className="label">Location:</label>
                         <input className="input" type="text" name="location" onChange={this.handleChange} />                    
                     </div>
-                    <div className="field">
+                    {/* <div className="field">
                         <label className="label">First aid:</label>
                         <input className="input" type="text" name="first_aid" onChange={this.handleChange} />                    
+                    </div> */}
+                    <div className="control" >
+                    <label className="label">First aid:</label>
+                        <div className="select" >
+                            <select name="first_aid" onChange={this.handleChange}>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
                     </div>
+                    <br/>
                     <input className="button is-info" type="submit" />
                 </form>
             </div>
             </div>
-            
-
         )
     }
 }
