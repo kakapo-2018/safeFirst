@@ -76,3 +76,22 @@ img {
     margin: auto;
     padding: 35px;
     }
+
+.dashboardcontainer {
+    width: 100%;
+    /* height: 200px;
+    background: aqua; */
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.left {
+    float: left;
+    flex: 49%;
+}
+
+.right {
+    margin-left: 2%;
+    flex: 51%;
+}    

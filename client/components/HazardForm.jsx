@@ -1,47 +1,71 @@
 import React from 'react'
-
-// class HazardForm extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             crew: '',
-//             hazard: '',
-//             risk: 1,
-//             control: ''
-//         }
-//         this.handleChange = this.handleChange.bind(this)
-//         this.handleSubmit = this.handleSubmit.bind(this)
-//     }
-//     handleChange(event) {
-//         this.setState({value: event.target.name})
-//     }
-//     handleSubmit(event) {
-//         alert('A name was submitted: ' + this.state.value)
-//         event.preventDefault()
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <h1>HAZARD ID FORM</h1>
-//                 <form>
-
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
+//import {connect} from 'react-redux'
+import {getHazards} from '../utils/apiclient'
 
 
-const HazardForm = (props) => (
-        <div>
-            <h1>
-                HazardForm
-            </h1>
-        </div>
+class HazardForm extends React.Component    {
+    constructor(props)  {
+        super(props)
+        this.state = {
+            Hazard: '',
+            Risk: '',
+            Control: '',
+            Date: ''
+        } 
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+        this.refreshForm = this.refreshForm.bind(this)
+        }
 
-)
+    onSubmit(evt)  {
+        this.setState({[evt.target.name]: evt.target.value})
+    }
 
+    handleSubmit(evt)  {
+        evt.preventDefault()
+        getHazards(this.state)
+        console.log(this.state)
+    }
+
+    refreshForm()   {
+        this.setState({
+        })
+        this.render()
+    }
+
+    render()    {
+        return  (
+            <form onSubmit={this.handleSubmit}>
+                <label className = "label">Hazard:
+                <input className="input" type="text" name="Hazard" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <label className = "label">Risk:
+                <input className="input" type="text" name="Risk" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+
+                <label className = "label">Control:
+                <input className="input" type="text" name="Control" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <label className = "label">Date:
+                <input className="input" type="text" name="Date" onchange={this.onSubmit}>
+                </input>
+                </label>
+                <br></br>
+                
+                <input className="button" type="submit" name="Add">
+                </input>
+            </form>
+        ) 
+    }
+}
 
     
 export default HazardForm
