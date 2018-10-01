@@ -40,8 +40,21 @@ export default class HazardsDay extends React.Component {
 
       return (
         <div>
+<<<<<<< HEAD
+            {
+                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                    return (
+                    <div key={hazard.id}>
+                        <p>Hazard: {hazard.hazard}</p>
+                        <p>Risk: {hazard.risk}</p>
+                        <p>Control: {hazard.control}</p>
+                        <p>Date: {hazard.date}</p>
+                        <br />
+                        <hr />
+=======
             <div className="block">
                 <h1 className="title">Hazards for  {today} </h1>
+>>>>>>> 2c753710e4d9f671647fa4037bcc682b825f986b
                     </div>
                         <div className="block">
                             <table className="table is-striped is-hoverable is-fullwidth">
