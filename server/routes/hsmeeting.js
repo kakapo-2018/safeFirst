@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 
 router.post('/hazard', (req, res) => {
     let data = req.body
-    delete data.Date
     db.postHazard(data)
     .then(hazards => {
         res.json(hazards)

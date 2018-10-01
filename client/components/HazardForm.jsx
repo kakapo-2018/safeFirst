@@ -58,7 +58,7 @@ class HazardForm extends React.Component    {
                 <br></br>
                 
                 <label className = "label">Date:
-                <input className="input" type="text" name="Date" onChange={this.onSubmit}>
+                <input className="input" type="date" name="Date" onChange={this.onSubmit}>
                 </input>
                 </label>
                 <br></br>
