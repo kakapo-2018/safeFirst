@@ -20,12 +20,12 @@ class Landing extends React.Component {
                     >
                     <BackgroundImage />
 
-                    transitionName = {{
+                    {/* transitionName = {{
                         enter: 'enter',
                         enterActive: '',
                         leave: 'leave',
                         leaveActive: 'leaveActive',
-                    }}
+                    }} */}
                 </CSSTransitionGroup>
             </div>
         )
