@@ -38,7 +38,7 @@ export function loginUser (creds) {
       })
       .catch(err => {
         console.log(err)
-        dispatch(loginError(err.response.body.message))
+        dispatch(loginError(err.message))
       })
   }
 }
