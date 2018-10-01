@@ -41,7 +41,11 @@
     "babel-register": "^6.24.1",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.15.2",
+<<<<<<< HEAD
     "bulma-calendar": "^5.0.1",
+=======
+    "bulma": "^0.7.1",
+>>>>>>> f78bc9559d2b1586a05d9597d5421eef5efe547f
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
