@@ -1,5 +1,6 @@
 import React from 'react'
 import {getHazards} from '../utils/apiclient.js'
+import moment from 'moment'
 
 export default class HazardsDay extends React.Component {
     constructor(props) {
@@ -30,6 +31,8 @@ export default class HazardsDay extends React.Component {
     render() {
         console.log('render', this.state.hazards.length)
         console.log()
+
+        const today = moment(new Date()).format('dddd Do MMMM')
         
         // const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
         // document.write(utc);
@@ -38,7 +41,7 @@ export default class HazardsDay extends React.Component {
       return (
         <div>
             <div className="block">
-                <h1 className="title">Hazards for   </h1>
+                <h1 className="title">Hazards for  {today} </h1>
                     </div>
                         <div className="block">
                             <table className="table is-striped is-hoverable is-fullwidth">
