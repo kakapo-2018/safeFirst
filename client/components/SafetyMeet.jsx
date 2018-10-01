@@ -59,10 +59,10 @@ class SafetyMeet extends React.Component {
                         </div>
                         <div className="field is-grouped">
                             <div className="control">
-                                <button className="button is-link">Submit</button>
+                                <button className="button is-link" className="button is-success">Submit</button>
                             </div>
                             <div className="control">
-                                <button className="button is-link">Cancel</button>
+                                <button className="button is-link" className="button is-danger">Cancel</button>
                             </div>
                         </div>
                     </div>
