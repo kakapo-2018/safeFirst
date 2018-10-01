@@ -67,10 +67,14 @@ npm manifest:
       "bcrypt": "^1.0.3",
       "body-parser": "^1.15.2",
   <<<<<<< HEAD
+  <<<<<<< HEAD
       "bulma-calendar": "^5.0.1",
   =======
       "bulma": "^0.7.1",
   >>>>>>> f78bc9559d2b1586a05d9597d5421eef5efe547f
+  =======
+      "bulma": "^0.7.1",
+  >>>>>>> 177f41b6b1f0b32153e6d28898ce0f5ec593cdd5
       "cors": "^2.8.3",
       "dotenv": "^4.0.0",
       "express": "^4.14.0",
@@ -1446,6 +1450,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   
   <<<<<<< HEAD
+  <<<<<<< HEAD
   bulma-calendar@^5.0.1:
     version "5.0.1"
     resolved "https://registry.yarnpkg.com/bulma-calendar/-/bulma-calendar-5.0.1.tgz#758db52b661f3b57aad7006ce6570c32f1487ed2"
@@ -1456,6 +1461,12 @@ Lockfile:
     version "0.7.1"
     resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.1.tgz#73c2e3b2930c90cc272029cbd19918b493fca486"
   >>>>>>> f78bc9559d2b1586a05d9597d5421eef5efe547f
+  =======
+  
+  bulma@^0.7.1:
+    version "0.7.1"
+    resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.1.tgz#73c2e3b2930c90cc272029cbd19918b493fca486"
+  >>>>>>> 177f41b6b1f0b32153e6d28898ce0f5ec593cdd5
   
   bytes@3.0.0:
     version "3.0.0"
