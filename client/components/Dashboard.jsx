@@ -14,13 +14,14 @@ class Dashboard extends React.Component {
           <div>
             <Header />
           </div>
-          <div>
-          <hr />
-            <HazardsDay />
-            <hr />
-            <Statistics />
-            <hr />
-          </div>
+          <div className="dashboardcontainer">
+            <div className="left">
+              <HazardsDay />
+             </div>
+            <div className="right">
+              <Statistics />
+            </div>
+          </div>  
         </div>
   ) 
 }
