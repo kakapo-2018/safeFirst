@@ -2,9 +2,9 @@ import React from 'react'
 
 const Statistics = (props) => (
         <div>
-            <h1>
+            <p>
                 Statistics
-            </h1>
+            </p>
         </div>
 
 )
