@@ -3,28 +3,25 @@ const db = require('../server/db/dbdashboard')
 
 let testDB = null;
 
-beforeEach(() => {
+beforeAll(() => {
     testDB = testEnv.getTestDb()
     return testEnv.initialise(testDB)
   });
   
-  afterEach(() => testEnv.cleanup(testDB));
+  afterAll(() => testEnv.cleanup(testDB));
 
   test('getHazards returns all hazards', () => {
-      const expected = 6
+      const expected = 4
       return db.getHazards(testDB)
       .then(hazards => {
         const actual = hazards.length
         console.log(hazards, actual, expected)
         expect(actual).toBe(expected)
       })
-      .catch(err => expect(err).toBeNull)
-
-      
   })
 
   test('postHazard adds a new hazard', () => {
-      const expected = 7
+      const expected = 1
       return db
       .postHazard(
           {
@@ -37,16 +34,14 @@ beforeEach(() => {
               const actual = hazards.length
               expect(actual).toBe(expected)
           })
-          .catch(err => expect(err).toBeNull)
    })
 
    test('the previous test has included Electricity as a new hazard', () => {
-    const expected = 'Electricity'
+    const expected = 5
     return db
         .getHazards(testDB)
         .then(hazards => {
-            const actual = hazards.hazard
+            const actual = hazards.length
             expect(actual).toBe(expected)
         })
-        .catch(err => expect(err).toBeNull)
  })

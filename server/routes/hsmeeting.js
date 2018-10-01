@@ -20,5 +20,14 @@ router.post('/hazard', (req, res) => {
     })
 })
 
+
+router.post('/minute', (req, res) => {
+    let data = req.body
+    db.postMinute(data)
+    .then(minutes => {
+        res.json(minutes)
+    })
+})
+
 module.exports = router
 

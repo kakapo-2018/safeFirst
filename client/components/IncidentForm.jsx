@@ -40,19 +40,69 @@ class IncidentForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>Person involved:<input type="text" name="person_involved" onChange={this.handleChange} /></label><br />
-                <label>Incident type:<input type="text" name="incident_type" onChange={this.handleChange} /></label><br />
-                <label>Date & Time:<input type="text" name="date_time" onChange={this.handleChange} /></label><br />
-                <label>Task:<input type="text" name="task" onChange={this.handleChange} /></label><br />
-                <label>Other task:<input type="text" name="other_task" onChange={this.handleChange} /></label><br />
-                <label>Incident:<input type="text" name="incident" onChange={this.handleChange} /></label><br />
-                <label>Other incidident:<input type="text" name="other_incident" onChange={this.handleChange} /></label><br />
-                <label>Location:<input type="text" name="location" onChange={this.handleChange} /></label><br />
-                <label>First aid:<input type="text" name="first_aid" onChange={this.handleChange} /></label><br />
-                <input type="submit" />
-                {/* <button onClick={this.refreshForm}>Refresh</button> */}
-            </form>
+            <div>
+            <div className="block">
+                <h1 className="title">Incident Form</h1>
+                <p className="content">
+                Please fill in this form to generate a new incident. <br />
+                A full list of previously generated incidents can be found at the bottom of the page.
+                </p>
+            </div>
+            <div className="block">
+                <form onSubmit={this.handleSubmit}>
+                    <div className="field">
+                        <label className="label">Person involved:</label>
+                        <input className="input" type="text" name="person_involved" onChange={this.handleChange} />
+                    </div>
+                    <div className="field">    
+                        <label className="label">Incident type:</label>
+                        <input className="input" type="text" name="incident_type" onChange={this.handleChange} />
+                    </div>
+                    <div className="control">
+                    <label className="label">Incident type:</label>
+                        <div className="select">
+                            <select>
+                                <option></option>
+                                <option>Near miss</option>
+                                <option>Injury</option>
+                                <option>Accident</option>
+                            </select>
+                        </div>
+                    </div>
+                    {/* <div className="field">
+                        <label className="label">Date & Time:</label>
+                        <input className="input" type="text" name="date_time" onChange={this.handleChange} />
+                    </div>  */}
+                    <div className="field">
+                        <label className="label">Task:</label>
+                        <input className="input" type="text" name="task" onChange={this.handleChange} />
+                    </div>
+                    <div className="field">
+                        <label className="label">Other task:</label>
+                        <input className="input" type="text" name="other_task" onChange={this.handleChange} />
+                    </div>
+                    <div className="field">
+                        <label className="label">Incident:</label>
+                        <input className="input" type="text" name="incident" onChange={this.handleChange} />
+                    </div>
+                    <div className="field">
+                        <label className="label">Other incidident:</label>
+                        <input className="input" type="text" name="other_incident" onChange={this.handleChange} />
+                    </div>
+                    <div className="field">
+                        <label className="label">Location:</label>
+                        <input className="input" type="text" name="location" onChange={this.handleChange} />                    
+                    </div>
+                    <div className="field">
+                        <label className="label">First aid:</label>
+                        <input className="input" type="text" name="first_aid" onChange={this.handleChange} />                    
+                    </div>
+                    <input className="button is-info" type="submit" />
+                </form>
+            </div>
+            </div>
+            
+
         )
     }
 }

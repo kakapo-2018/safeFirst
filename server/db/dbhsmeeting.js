@@ -12,7 +12,14 @@ function postHazard(newHazard, testDB){
     .insert(newHazard)
 }
 
+function postMinute(newMinutes, testDB){
+    const db = testDB || connection
+    return db('meetings')
+    .insert(newMinutes)
+}
+
 module.exports = {
     getHazards, 
-    postHazard
+    postHazard,
+    postMinute
 }

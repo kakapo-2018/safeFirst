@@ -3,16 +3,22 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
-      <div>
-          <h1>safeFirst</h1>  
-               <div> 
-                  <h3><Link to="/dashboard" className={'navoptions'}>Home</Link></h3>
-                  <h3><Link to="/dailymeeting" className={'navoptions'}>Daily Meeting</Link></h3>
-                  <h3><Link to="/hsmeeting" className={'navoptions'}>H&S Meeting</Link></h3>
-                  <h3><Link to="/incidents" className={'navoptions'}>Incidents</Link></h3>
-                </div> 
-      </div>           
+   
+      <nav className="navbar navbarcolour">
+        <div className="container">
+          <div className="navbar-brand navbar-start">
+            <h1 className="title is-1">safeFirst</h1> 
+          </div>
+          <div className="navbar-menu navbar-end is-active">
+            <Link to="/dashboard" className="navbar-item is-size-4">Home</Link>
+            <Link to="/dailymeeting" className="navbar-item is-size-4">Daily Meeting</Link>
+            <Link to="/hsmeeting" className="navbar-item is-size-4">H&S Meeting</Link>
+            <Link to="/incidents" className="navbar-item is-size-4">Incidents</Link>
+          </div>
+        </div>
+      </nav>        
+    
     )
-}
+  }
 
 export default Header

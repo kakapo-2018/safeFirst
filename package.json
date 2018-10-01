@@ -8,7 +8,7 @@
     "postinstall": "webpack",
     "dev": "nodemon --watch server server/index & webpack --watch",
     "start": "node server/index",
-    "test": "ava  -v  --serial 'test/**/*.test.js'",
+    "test": "jest --watchAll --noStackTrace",
     "watch": "nodemon -e js,jsx -x npm test",
     "knex": "knex"
   },
@@ -60,6 +60,7 @@
     "react-test-renderer": "^15.5.4",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
+    "sinon": "^6.3.4",
     "superagent": "^2.2.0",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
