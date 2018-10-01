@@ -36,15 +36,16 @@ class SafetyMeet extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1>Safety Meeting</h1>
+                <div className="block">
+                <h1 className="title">H&S meeting minutes</h1>
+                    <p className="content">
+                    Enter the notes of your periodic Health and Safety Meeting in the below form.<br />
+                    </p>
+                </div>
                 <div className="column is-left">
-                        <div className="column is-one-fifth">
-                            <label className="label">Meeting ID:   </label>
-                                <input className="input" type="text" name="id" onChange={this.handleChange} />
-                        </div> 
                         <div className="column is-two-fifths">
-                            <label className="label">Date - Time:   </label>
-                                <input className="input" type="text" name="date_time" onChange={this.handleChange} />
+                            <label className="label">Date:</label>
+                                <input className="input" type="date" name="date_time" onChange={this.handleChange} />
                         </div> 
                         <div className="column is-two-fifths">
                             <label className="label">Location:   </label>
@@ -62,9 +63,6 @@ class SafetyMeet extends React.Component {
                             </div>
                             <div className="control">
                                 <button className="button is-link">Cancel</button>
-                            </div>
-                            <div className="control">
-                                <button className="button is-link">Add Hazard</button>
                             </div>
                         </div>
                     </div>
