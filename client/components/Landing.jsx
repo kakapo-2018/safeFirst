@@ -20,7 +20,6 @@ class Landing extends React.Component {
                     transitionLeaveTimeout={3000}
                     >
                     <BackgroundImage />
-
                     transitionName = {{
                         enter: 'enter',
                         enterActive: '',

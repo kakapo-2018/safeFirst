@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
           user_name: 'Cameron',
           email_address: 'user1@devacademy.co.nz',
           contact_details: '0210538976',
-          hash: hashSync('user1', saltRounds),
+          hash: hashSync('password', saltRounds),
           company_id: '1',
           industry_id: '1'
         },
@@ -21,7 +21,7 @@ exports.seed = function(knex, Promise) {
           user_name: 'Robert',
           email_address: 'user2@devacademy.co.nz',
           contact_details: '022595997',
-          hash: hashSync('user2', saltRounds),
+          hash: hashSync('password', saltRounds),
           company_id: '2',
           industry_id: '2'
         },
@@ -30,7 +30,7 @@ exports.seed = function(knex, Promise) {
           user_name: 'Richard',
           email_address: 'user3@gmail.com',
           contact_details: '0225979959',
-          hash: hashSync('user3', saltRounds),
+          hash: hashSync('password', saltRounds),
           company_id: '3',
           industry_id: '3'
         },
