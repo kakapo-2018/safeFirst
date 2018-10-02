@@ -12,7 +12,7 @@ class Landing extends React.Component {
                 <h1>
                     I am a landing page
                 </h1>
-                <CSSTransitionGroup
+                {/* <CSSTransitionGroup
                     transitionName="background"
                     transitionAppear={true}
                     transitionAppearTimeout={3000}
@@ -21,13 +21,13 @@ class Landing extends React.Component {
                     >
                     <BackgroundImage />
 
-                    {/* transitionName = {{
+                    transitionName = {{
                         enter: 'enter',
                         enterActive: '',
                         leave: 'leave',
                         leaveActive: 'leaveActive',
-                    }} */}
-                </CSSTransitionGroup>
+                    }}
+                </CSSTransitionGroup> */}
             </div>
         )
     }

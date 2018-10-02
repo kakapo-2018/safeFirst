@@ -30,22 +30,26 @@ class App extends React.Component {
           <Router>  
             <div>
               <div>
+                  <Route path="/" component={Nav} /> 
 
-                <Route exact path="/" component={Nav} />             
-                <Route exact path="/" component={Landing} />             
-
-              </div> 
-              <div>
-                {/* {!this.props.auth.isAuthenticated ?
-                  <Route exact path="/" component={Landing} /> :  */}
-                  <Route exact path="/dashboard" component={Dashboard} /> 
-                {/* } */}
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/incidents" component={Incidents} />
-                <Route path="/hsmeeting" component={Hsmeeting} />
-                <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
-                <Route path="/dailymeeting" component={Dailymeeting} />
+                  {this.props.auth.isAuthenticated ? (
+                    <div>
+                    <Route exact path="/" component={Dashboard} /> 
+                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route path="/incidents" component={Incidents} />
+                    <Route path="/hsmeeting" component={Hsmeeting} />
+                    <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
+                    <Route path="/dailymeeting" component={Dailymeeting} /> 
+                    </div>
+                    ) : (
+                    <div>
+                    <Route exact path="/" component={Landing} />  
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    </div>
+                    )}
+                  
+                  
               </div>
             </div>
           </Router>
