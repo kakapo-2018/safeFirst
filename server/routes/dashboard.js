@@ -8,5 +8,13 @@ router.get('/', (req,res) => {
     })
 })
 
+router.get('/generic', (req,res) => {
+    db.getHazardsGeneric()
+    .then(hazards => {
+        res.json(hazards)
+    })
+})
+
+
 module.exports = router
 

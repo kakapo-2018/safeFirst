@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import IncidentForm from './IncidentForm'
 import IncidentList from './IncidentList'
+import IncidentHeader from './IncidentHeader'
 
 class Incidents extends React.Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class Incidents extends React.Component {
             <Header />
           </div>
           <div>
-            <hr />
+            <IncidentHeader />
+          </div>  
+          <div>
             <IncidentForm />
             <hr />
             <IncidentList />
@@ -26,3 +29,4 @@ class Incidents extends React.Component {
 }
  
 export default Incidents
+
