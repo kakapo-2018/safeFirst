@@ -8,7 +8,6 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('users').insert([
         {
-          id: 1,
           user_name: 'Cameron',
           email_address: 'user1@devacademy.co.nz',
           contact_details: '0210538976',
@@ -17,7 +16,6 @@ exports.seed = function(knex, Promise) {
           industry_id: '1'
         },
         {
-          id: 2,
           user_name: 'Robert',
           email_address: 'user2@devacademy.co.nz',
           contact_details: '022595997',
@@ -26,7 +24,6 @@ exports.seed = function(knex, Promise) {
           industry_id: '2'
         },
         {
-          id: 3,
           user_name: 'Richard',
           email_address: 'user3@gmail.com',
           contact_details: '0225979959',
@@ -35,7 +32,6 @@ exports.seed = function(knex, Promise) {
           industry_id: '3'
         },
         {
-          id: 4,
           user_name: 'user4',
           email_address: 'user4@devacademy.co.nz',
           contact_details: '0215995959',
@@ -44,7 +40,6 @@ exports.seed = function(knex, Promise) {
           industry_id: '2'
         },
         {
-          id: 5,
           user_name: 'user5',
           email_address: 'user5@devacademy.co.nz',
           contact_details: '022595998',
