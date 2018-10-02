@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+<<<<<<< HEAD
 
 import { CSSTransitionGroup } from 'react-transition-group'
 import BackgroundImage from './BackgroundImage';
@@ -16,6 +17,12 @@ class Landing extends React.Component {
 //             I am a landing page
 //         </h1>
 //     </div>
+=======
+import { CSSTransitionGroup } from 'react-transition-group'
+import BackgroundImage from './BackgroundImage';
+
+
+>>>>>>> 26bd4757e0913b9820d491b10b39c69fae3a9d4f
 
     render() {
         return (
@@ -43,17 +50,5 @@ class Landing extends React.Component {
         )
     }
 }
-
-// class App extends React.Component   {
-//     render()    {
-        
-//     }
-// }
-
-
-
-
-
-// )    
 
 export default Landing 

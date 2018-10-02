@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
 import Dashboard from './Dashboard'
+import Landing from './Landing'
 import Incidents from './Incidents'
 import Hsmeeting from './Hsmeeting'
 import Dailymeeting from './Dailymeeting'
@@ -30,18 +31,22 @@ class App extends React.Component {
           <Router>  
             <div>
               <div>
+
                 <Route exact path="/" component={Nav} />             
                 <Route exact path="/" component={Landing} />             
+
               </div> 
               <div>
-                  { this.props.auth.isAuthenticated && <Dashboard /> }
-                  <Route exact path="/dashboard" component={Dashboard} />
-                  <Route path="/login" component={Login} />
-                  <Route path="/register" component={Register} />
-                  <Route path="/incidents" component={Incidents} />
-                  <Route path="/hsmeeting" component={Hsmeeting} />
-                  <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
-                  <Route path="/dailymeeting" component={Dailymeeting} />
+                {/* {!this.props.auth.isAuthenticated ?
+                  <Route exact path="/" component={Landing} /> :  */}
+                  <Route exact path="/dashboard" component={Dashboard} /> 
+                {/* } */}
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
+                <Route path="/incidents" component={Incidents} />
+                <Route path="/hsmeeting" component={Hsmeeting} />
+                <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
+                <Route path="/dailymeeting" component={Dailymeeting} />
               </div>
             </div>
           </Router>

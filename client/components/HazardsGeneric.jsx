@@ -1,5 +1,5 @@
 import React from 'react'
-import { getHazards } from '../utils/apiclient.js'
+import { getHazardsGeneric } from '../utils/apiclient.js'
 import moment from 'moment'
 
 export default class HazardsDay extends React.Component {
@@ -17,7 +17,7 @@ export default class HazardsDay extends React.Component {
     }
 
     fetchHazards() {
-        getHazards()
+        getHazardsGeneric()
             .then(hazards => {
                 this.setState({ hazards: hazards })
             })
@@ -34,14 +34,10 @@ export default class HazardsDay extends React.Component {
 
         const today = moment(new Date()).format('dddd Do MMMM')
 
-        // const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-        // document.write(utc);
-
-
         return (
         <div>        
         <div className="block">
-            <h1 className="title">Hazards for  {today} </h1>
+            <h1 className="title">Generic Hazards</h1>
                 </div>
                     <div className="block">
                         <table className="table is-striped is-hoverable is-fullwidth">
