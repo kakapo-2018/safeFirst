@@ -1,6 +1,8 @@
 import request from 'superagent'
 
 export function getHazards() {
+    console.log('getHazards')
+
     return request
     .get('/api/dashboard')
     .then(res => {
@@ -9,6 +11,30 @@ export function getHazards() {
     })
     .catch(() => {
         throw Error('You need to implement an API route for /api/dashboard')
+    })
+}
+
+export function getHazardsGeneric() {
+    console.log('getHazardsGeneric')
+
+    return request
+    .get('/api/dashboard/generic')
+    .then(res => {
+        const hazards = res.body
+        return hazards
+    })
+    .catch(() => {
+        throw Error('You need to implement an API route for /api/dashboard/generic')
+    })
+}
+
+export function newHazard (hazard, callback)    {
+    console.log(hazard)
+    request
+    .post('api/hsmeeting/hazard')
+    .send(hazard)
+    .end((err, res) =>   {
+        callback(err, res)
     })
 }
 

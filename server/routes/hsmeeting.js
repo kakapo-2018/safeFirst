@@ -3,8 +3,10 @@ const db = require('../db/dbhsmeeting')
 
 
 router.get('/', (req, res) => {
+    console.log('here')
     db.getHazards()
     .then(hazards => {
+        console.log(hazards)
         res.json(hazards)
     })
 })

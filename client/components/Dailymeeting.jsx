@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import HazardForm from './HazardForm'
+import DailymeetingHeader from './DailymeetingHeader'
 
 
 class Dailymeeting extends React.Component {
@@ -9,18 +10,20 @@ class Dailymeeting extends React.Component {
   }
 
   render() {
-      return ( 
+    return (
+      <div>
         <div>
-          <div>
-            <Header />
-            <hr />
-          </div>
-          <div>
-            <HazardForm />
-          </div>
+          <Header />
         </div>
-  ) 
+        <div>
+          <DailymeetingHeader />
+        </div>
+        <div>
+          <HazardForm {...this.props} />
+        </div>
+      </div>
+    )
+  }
 }
-}
- 
+
 export default Dailymeeting
