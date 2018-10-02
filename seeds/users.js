@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
       return knex('users').insert([
         {
           id: 1,
-          user_name: 'user1',
+          user_name: 'Cameron',
           email_address: 'user1@devacademy.co.nz',
           contact_details: '0210538976',
           hash: hashSync('user1', saltRounds),
@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 2,
-          user_name: 'user2',
+          user_name: 'Robert',
           email_address: 'user2@devacademy.co.nz',
           contact_details: '022595997',
           hash: hashSync('user2', saltRounds),
@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 3,
-          user_name: 'user3',
+          user_name: 'Richard',
           email_address: 'user3@gmail.com',
           contact_details: '0225979959',
           hash: hashSync('user3', saltRounds),
