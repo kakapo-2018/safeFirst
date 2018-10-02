@@ -8,6 +8,9 @@ import HazardsGeneric from './HazardsGeneric'
 
 
 
+
+
+
 class Dashboard extends React.Component {
   constructor(props) {
     super(props)
