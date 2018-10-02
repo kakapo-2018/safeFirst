@@ -1,31 +1,8 @@
 import React from 'react'
 import Header from './Header'
-
-<<<<<<< HEAD
 import { CSSTransitionGroup } from 'react-transition-group'
 import BackgroundImage from './BackgroundImage';
-=======
-class Landing extends React.Component {
-    constructor(props) {
-        super(props)
-    }
 
-    render() {
-        return (
-            <div>
-                <Header />
-            </div>
-        )
-    }
-}
-// const Landing = (props) => (
-//     <div>
-//         <h1>
-//             I am a landing page
-//         </h1>
-//     </div>
-// )    
->>>>>>> 2c753710e4d9f671647fa4037bcc682b825f986b
 
 
 class Landing extends React.Component {
@@ -55,17 +32,5 @@ class Landing extends React.Component {
         )
     }
 }
-
-// class App extends React.Component   {
-//     render()    {
-        
-//     }
-// }
-
-
-
-
-
-// )    
 
 export default Landing 

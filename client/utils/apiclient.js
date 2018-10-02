@@ -14,6 +14,20 @@ export function getHazards() {
     })
 }
 
+export function getHazardsGeneric() {
+    console.log('getHazardsGeneric')
+
+    return request
+    .get('/api/dashboard/generic')
+    .then(res => {
+        const hazards = res.body
+        return hazards
+    })
+    .catch(() => {
+        throw Error('You need to implement an API route for /api/dashboard/generic')
+    })
+}
+
 export function newHazard (hazard, callback)    {
     console.log(hazard)
     request

@@ -6,6 +6,11 @@ function getHazards(testDB) {
     .where('daily', '=', 'true')
 }
 
+function getHazardsGeneric(testDB) {
+    const db = testDB || connection
+    return db('hazards')
+    .where('daily', '=', 'false')
+}
 function postHazard(newHazard, testDB){
     const db = testDB || connection
     return db('hazards')
@@ -14,5 +19,6 @@ function postHazard(newHazard, testDB){
 
 module.exports = {
     getHazards,
-    postHazard
+    postHazard,
+    getHazardsGeneric
 }
