@@ -79,16 +79,30 @@ img {
 
 .background-appear {
     opacity: 0.01;
-    position: fixed;
+    position: left;
     transform: translate(100%);
 }
     
 .background-appear.background-appear-active {
-    position: fixed;
+    position: left;
     opacity: 1;
     transition: position 3s ease-in;
     transform: translate(0%);
     transition: transform 1000ms ease-in-out;
+}
+
+.background-disappear.background-disappear-active  {
+    position: right;
+    opacity: 1;
+    transition: position ease-out;
+    transform: translate(0%);
+    transition: transition 1000ms ease-out;
+}
+
+.background-disappear    {
+    opacity: 0.05;
+    position: right;
+    transform: translate(100%);
 }
 
 .dashboardcontainer {
