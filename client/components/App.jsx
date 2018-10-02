@@ -29,13 +29,8 @@ class App extends React.Component {
           <Router>  
             <div>
               <div>
-<<<<<<< HEAD
                 <Route exact path="/" component={Nav} />             
                 <Route exact path="/" component={Landing} />             
-=======
-                  <Route exact path="/" component={Nav} /> 
-                  {/* <Route path="/" component={Landing} />    */}
->>>>>>> 2c753710e4d9f671647fa4037bcc682b825f986b
               </div> 
               <div>
                   { this.props.auth.isAuthenticated && <Dashboard /> }

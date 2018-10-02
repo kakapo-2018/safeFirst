@@ -77,7 +77,6 @@ img {
     padding: 35px;
     }
 
-<<<<<<< HEAD
 .background-appear {
     opacity: 0.01;
     position: fixed;
@@ -91,23 +90,3 @@ img {
     transform: translate(0%);
     transition: transform 1000ms ease-in-out;
 }
-=======
-.dashboardcontainer {
-    width: 100%;
-    /* height: 200px;
-    background: aqua; */
-    margin: auto;
-    padding: 10px;
-    display: flex;
-}
-
-.left {
-    float: left;
-    flex: 49%;
-}
-
-.right {
-    margin-left: 2%;
-    flex: 51%;
-}    
->>>>>>> 2c753710e4d9f671647fa4037bcc682b825f986b
