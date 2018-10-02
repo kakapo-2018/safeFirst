@@ -23,26 +23,34 @@ class App extends React.Component {
 // When logged in, show the following components: Header & Dashboard
 
 // Authentication commented out below as currently not working
-
+    
 
     render() {
+      console.log(this.props.auth)
         return ( 
           <Router>  
             <div>
               <div>
-                <Route exact path="/" component={Nav} />             
-              </div> 
-              <div>
-                {/* {!this.props.auth.isAuthenticated ?
-                  <Route exact path="/" component={Landing} /> :  */}
-                  <Route exact path="/dashboard" component={Dashboard} /> 
-                {/* } */}
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/incidents" component={Incidents} />
-                <Route path="/hsmeeting" component={Hsmeeting} />
-                <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
-                <Route path="/dailymeeting" component={Dailymeeting} />
+                  <Route path="/" component={Nav} /> 
+
+                  {this.props.auth.isAuthenticated ? (
+                    <div>
+                    <Route exact path="/" component={Dashboard} /> 
+                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route path="/incidents" component={Incidents} />
+                    <Route path="/hsmeeting" component={Hsmeeting} />
+                    <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
+                    <Route path="/dailymeeting" component={Dailymeeting} /> 
+                    </div>
+                    ) : (
+                    <div>
+                    <Route exact path="/" component={Landing} />  
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    </div>
+                    )}
+                  
+                  
               </div>
             </div>
           </Router>

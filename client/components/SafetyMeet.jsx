@@ -8,7 +8,6 @@ class SafetyMeet extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: '',
             date_time: '',
             location: '',
             issues: '',
@@ -36,53 +35,37 @@ class SafetyMeet extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-            <h1>Safety Meeting</h1>
-                <div class="field">
-                    <label class="label">Date - Time:   </label>
-                        <  input class="input" type="text" name="date_time" onChange={this.handleChange} />
+                <div className="block">
+                <h1 className="title">H&S Meeting Minutes</h1>
+                    <p className="content">
+                    Enter the notes of your periodic Health and Safety Meeting in the below form.<br />
+                    </p>
                 </div>
-                <div class="field">
-                    <label class="label">ID:   </label>
-                        <  input class="input" type="text" name="id" onChange={this.handleChange} />
-                </div>
-                <div class="field">
-                    <label class="label">Location:   </label>
-                        <  input class="input" type="text" name="location" onChange={this.handleChange} />
-                </div>
-                <div class="field">
-                    <label class="label">Discussion:</label>
-                    <p>Health & Safety concerns, training needs, incidents/accident trends, personal   </p>
-                        <div class="control">
-                            <textarea class="textarea" name="issues" rows="15" onChange={this.handleChange}></textarea>
+                <div>
+                        <div>
+                            <label className="label">Date:</label>
+                                <input className="input" type="date" name="date_time" onChange={this.handleChange} />
+                        </div>  
+                        <div>
+                            <label className="label">Location:</label>
+                                <input className="input" type="text" name="location" onChange={this.handleChange} />
                         </div>
-                </div>
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-link">Submit</button>
+                        <div>
+                            <label className="label">Minutes:</label>
+                                <div className="control">
+                                    <textarea className="textarea" type="text" name="issues" placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
+                                </div>
+                        </div>
+                        <br />
+                        <div className="field is-grouped">
+                            <div className="control">
+                                <button className="button is-info">Submit</button>
+                            </div>
+                            <div className="control">
+                                <button className="button is-danger">Cancel</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="control">
-                        <button class="button is-text">Cancel</button>
-                    </div>
-                </div>
-
-
-
-
-                
-
-            {/* <label>Date:
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
-            </label>
-                <label>
-                    Attendees:
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
-                </label> */}
-
-                {/* <label>
-                <br/>
-                <Link to="/hsmeetinglist" className={'navoptions'}>List with all Safety Meetings notes</Link>
-                <hr />
-                </label> */}
             </form>
         )
     }

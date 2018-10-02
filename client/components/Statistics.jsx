@@ -1,11 +1,9 @@
 import React from 'react'
 
 const Statistics = (props) => (
-        <div>
-            <h1>
-                Statistics
-            </h1>
-        </div>
+    <div className="block">
+        <h1 className="title">Statistics</h1>
+    </div>    
 
 )
     

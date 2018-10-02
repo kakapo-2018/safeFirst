@@ -32,7 +32,14 @@ export default class IncidentList extends React.Component {
         console.log()
         
       return (
-        <div className="block">
+        <div>
+            <div className="block">
+                <h1 className="title">List of Incidents</h1>
+                    <p className="content">
+                    The following incidents have taken place.<br />
+                    </p>
+            </div>
+            <div className="block">
             <table className="table is-striped is-hoverable is-fullwidth">
                 <thead>
                     <tr>
@@ -66,6 +73,7 @@ export default class IncidentList extends React.Component {
                     })
                     }  
             </table>
+        </div>
         </div>
     )}
 }
