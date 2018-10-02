@@ -111,3 +111,8 @@ img {
     flex: 51%;
 }    
 
+.welcome {
+    display: inline-block;
+}
+
+
