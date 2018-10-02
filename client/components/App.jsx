@@ -23,9 +23,10 @@ class App extends React.Component {
 // When logged in, show the following components: Header & Dashboard
 
 // Authentication commented out below as currently not working
-
+    
 
     render() {
+      console.log(this.props.auth)
         return ( 
           <Router>  
             <div>
