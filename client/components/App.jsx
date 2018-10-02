@@ -3,6 +3,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Login from './Login'
 import Register from './Register'
+import Landing from './Landing'
 import Dashboard from './Dashboard'
 import Incidents from './Incidents'
 import Hsmeeting from './Hsmeeting'
@@ -29,18 +30,26 @@ class App extends React.Component {
           <Router>  
             <div>
               <div>
-                  <Route exact path="/" component={Nav} /> 
-                  {/* <Route path="/" component={Landing} />    */}
-              </div> 
-              <div>
-                  { this.props.auth.isAuthenticated && <Dashboard /> }
-                  <Route exact path="/dashboard" component={Dashboard} />
-                  <Route path="/login" component={Login} />
-                  <Route path="/register" component={Register} />
-                  <Route path="/incidents" component={Incidents} />
-                  <Route path="/hsmeeting" component={Hsmeeting} />
-                  <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
-                  <Route path="/dailymeeting" component={Dailymeeting} />
+                  <Route path="/" component={Nav} /> 
+
+                  {this.props.auth.isAuthenticated ? (
+                    <div>
+                    <Route exact path="/" component={Dashboard} /> 
+                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route path="/incidents" component={Incidents} />
+                    <Route path="/hsmeeting" component={Hsmeeting} />
+                    <Route path="/hsmeetinglist" component={SafetyMeetContainer} />
+                    <Route path="/dailymeeting" component={Dailymeeting} /> 
+                    </div>
+                    ) : (
+                    <div>
+                    <Route exact path="/" component={Landing} />  
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    </div>
+                    )}
+                  
+                  
               </div>
             </div>
           </Router>
