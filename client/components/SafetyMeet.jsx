@@ -8,7 +8,6 @@ class SafetyMeet extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: '',
             date_time: '',
             location: '',
             issues: '',
@@ -36,35 +35,34 @@ class SafetyMeet extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1 className="title">H&S Meeting</h1>
-                <div className="column">
-                        <div className="column is-one-fifth">
-                            <label className="label">Meeting ID:   </label>
-                                <input className="input" type="text" name="id" onChange={this.handleChange} />
-                        </div> 
-                        <div className="column is-two-fifths">
-                            <label className="label">Date - Time:   </label>
-                                <input className="input" type="text" name="date_time" onChange={this.handleChange} />
-                        </div> 
-                        <div className="column is-two-fifths">
-                            <label className="label">Location:   </label>
+                <div className="block">
+                <h1 className="title">H&S Meeting Minutes</h1>
+                    <p className="content">
+                    Enter the notes of your periodic Health and Safety Meeting in the below form.<br />
+                    </p>
+                </div>
+                <div>
+                        <div>
+                            <label className="label">Date:</label>
+                                <input className="input" type="date" name="date_time" onChange={this.handleChange} />
+                        </div>  
+                        <div>
+                            <label className="label">Location:</label>
                                 <input className="input" type="text" name="location" onChange={this.handleChange} />
                         </div>
-                        <div className="column is-two-thirds">
+                        <div>
                             <label className="label">Discussion:</label>
                                 <div className="control">
-                                    <textarea className="textarea" name="issues" placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
+                                    <textarea className="textarea" type="text" name="issues" placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
                                 </div>
                         </div>
+                        <br />
                         <div className="field is-grouped">
                             <div className="control">
-                                <button className="button is-link" className="button is-success">Submit</button>
+                                <button className="button is-info">Submit</button>
                             </div>
                             <div className="control">
-                                <button className="button is-link" className="button is-danger">Cancel</button>
-                            </div>
-                            <div className="control">
-                                <button className="button is-link" className="button is-warning">Add Hazard</button>
+                                <button className="button is-danger">Cancel</button>
                             </div>
                         </div>
                     </div>

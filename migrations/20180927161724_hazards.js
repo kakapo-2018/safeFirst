@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
       table.string('risk')
       table.string('control')
       table.string('daily')
+      table.string('date')
     })
   };
   
