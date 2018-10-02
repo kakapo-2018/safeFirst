@@ -2,7 +2,6 @@ import React from 'react'
 //import {connect} from 'react-redux'
 import { newHazard } from '../utils/apiclient'
 
-
 class HazardForm extends React.Component {
     constructor(props) {
         super(props)
@@ -66,6 +65,5 @@ class HazardForm extends React.Component {
         )
     }
 }
-
 
 export default HazardForm

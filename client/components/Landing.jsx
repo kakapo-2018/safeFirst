@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './Header'
-
 import { CSSTransitionGroup } from 'react-transition-group'
 import BackgroundImage from './BackgroundImage';
+
 
 
 class Landing extends React.Component {
@@ -32,17 +32,5 @@ class Landing extends React.Component {
         )
     }
 }
-
-// class App extends React.Component   {
-//     render()    {
-        
-//     }
-// }
-
-
-
-
-
-// )    
 
 export default Landing 
