@@ -6,12 +6,23 @@ import BackgroundImage from './BackgroundImage';
 
 
 class Landing extends React.Component {
+    constructor(props) {
+        super(props)
+    }       
+
+// const Landing = (props) => (
+//     <div>
+//         <h1>
+//             I am a landing page
+//         </h1>
+//     </div>
+
     render() {
         return (
             <div>
-                <h1>
-                    I am a landing page
-                </h1>
+                <div>
+                    <Header />
+                </div>
                 <CSSTransitionGroup
                     transitionName="background"
                     transitionAppear={true}
