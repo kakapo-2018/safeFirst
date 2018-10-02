@@ -51,7 +51,7 @@ class SafetyMeet extends React.Component {
                                 <input className="input" type="text" name="location" onChange={this.handleChange} />
                         </div>
                         <div>
-                            <label className="label">Discussion:</label>
+                            <label className="label">Minutes:</label>
                                 <div className="control">
                                     <textarea className="textarea" type="text" name="issues" placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
                                 </div>
