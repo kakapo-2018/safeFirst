@@ -126,7 +126,7 @@ class IncidentForm extends React.Component {
                         <br />
                         <div className="field is-grouped">
                             <div>
-                                <input className="button is-info" type="submit" />
+                                <button className="button is-info" type="submit">Submit</button>
                             </div>
                             <div>
                                 <button className="button is-danger" onClick={this.refreshForm}>Cancel</button>

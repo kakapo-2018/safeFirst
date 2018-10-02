@@ -33,9 +33,9 @@ class Landing extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <Header />
-                </div>
+                <h1>
+                    I am a landing page
+                </h1>
                 <CSSTransitionGroup
                     transitionName="background"
                     transitionAppear={true}
@@ -44,7 +44,6 @@ class Landing extends React.Component {
                     transitionLeaveTimeout={3000}
                     >
                     <BackgroundImage />
-
                     transitionName = {{
                         enter: 'enter',
                         enterActive: 'EnterActive',
