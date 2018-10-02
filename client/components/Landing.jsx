@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './Header'
-<<<<<<< HEAD
 
 import { CSSTransitionGroup } from 'react-transition-group'
 import BackgroundImage from './BackgroundImage';
@@ -17,12 +16,19 @@ class Landing extends React.Component {
 //             I am a landing page
 //         </h1>
 //     </div>
-=======
-import { CSSTransitionGroup } from 'react-transition-group'
-import BackgroundImage from './BackgroundImage';
+    handleAdd() {
+        const newItems = this.state.items.concat([
+        prompt('image')
+        ]);
+        this.setState({image: changeImage});
+    }
 
+    handleRemove(i) {
+        let changeImage = this.state.items.slice();
+        newImage.splice(i, 1);
+        this.setState({image: changeImage});
+    }
 
->>>>>>> 26bd4757e0913b9820d491b10b39c69fae3a9d4f
 
     render() {
         return (
@@ -39,12 +45,12 @@ import BackgroundImage from './BackgroundImage';
                     >
                     <BackgroundImage />
 
-                    {/* transitionName = {{
+                    transitionName = {{
                         enter: 'enter',
-                        enterActive: '',
+                        enterActive: 'EnterActive',
                         leave: 'leave',
                         leaveActive: 'leaveActive',
-                    }} */}
+                    }} 
                 </CSSTransitionGroup>
             </div>
         )
