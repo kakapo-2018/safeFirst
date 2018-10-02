@@ -10,7 +10,10 @@
     "start": "node server/index",
     "test": "jest --watchAll --noStackTrace",
     "watch": "nodemon -e js,jsx -x npm test",
-    "knex": "knex"
+    "knex": "knex",
+    "h:rollback": "heroku run yarn knex migrate:rollback",
+    "h:migrate": "heroku run yarn knex migrate:latest",
+    "h:seed": "heroku run yarn knex seed:run"
   },
   "ava": {
     "require": "babel-register",
