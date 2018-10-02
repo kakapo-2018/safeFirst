@@ -8,7 +8,6 @@ class SafetyMeet extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: '',
             date_time: '',
             location: '',
             issues: '',
@@ -45,10 +44,10 @@ class SafetyMeet extends React.Component {
                 <div>
                         <div>
                             <label className="label">Date:</label>
-                                <input className="input" type="text" name="date_time" onChange={this.handleChange} />
-                        </div> 
+                                <input className="input" type="date" name="date_time" onChange={this.handleChange} />
+                        </div>  
                         <div>
-                            <label className="label">Location:   </label>
+                            <label className="label">Location:</label>
                                 <input className="input" type="text" name="location" onChange={this.handleChange} />
                         </div>
                         <div>
