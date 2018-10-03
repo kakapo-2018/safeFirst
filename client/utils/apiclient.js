@@ -1,8 +1,6 @@
 import request from 'superagent'
 
 export function getHazards() {
-    console.log('getHazards')
-
     return request
     .get('/api/dashboard')
     .then(res => {
@@ -15,8 +13,6 @@ export function getHazards() {
 }
 
 export function getHazardsGeneric() {
-    console.log('getHazardsGeneric')
-
     return request
     .get('/api/dashboard/generic')
     .then(res => {
@@ -29,7 +25,6 @@ export function getHazardsGeneric() {
 }
 
 export function newHazard (hazard, callback)    {
-    console.log(hazard)
     request
     .post('api/hsmeeting/hazard')
     .send(hazard)
@@ -63,7 +58,6 @@ export function getMinutes() {
 }
 
 export function newIncident (incident, callback) {
-    console.log(incident)
     request
     .post('api/incidents')
     .send(incident)
@@ -72,14 +66,11 @@ export function newIncident (incident, callback) {
     })    
 }
 
-export function newMinutes (minute) {
-    console.log("Minute: ", minute)
+export function newMinutes (minute, callback) {
     request
     .post('api/hsmeeting/minute')
     .send(minute)
     .end((err, res) => {
-        console.log('hi')
-        console.log(err, res)
-        // callback(err,res)
+        callback(err,res)
     })
 }

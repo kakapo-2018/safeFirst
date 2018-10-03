@@ -6,19 +6,15 @@ exports.seed = function(knex, Promise) {
         return knex('industries').insert(
         [
           {
-            id: 1, 
             industry: 'Utility'
           },
           {
-            id: 2, 
             industry: 'Forestry'
           },
           {
-            id: 3, 
             industry: 'Postal / Courier Services'
           },
           {
-            id: 4, 
             industry: 'Education'
           }
         ]);

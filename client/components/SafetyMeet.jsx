@@ -1,18 +1,19 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
 import {newMinutes} from '../utils/apiclient'
 
-
+const initialState = {
+    date_time: '',
+    location: '',
+    issues: '', 
+}
 
 class SafetyMeet extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            date_time: '',
-            location: '',
-            issues: '',
-            
+            ...initialState
         }
+
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.refreshForm = this.refreshForm.bind(this)
@@ -22,17 +23,25 @@ class SafetyMeet extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault()
-        newMinutes(this.state)
-        console.log(this.state) 
-
+        const hazard = {...this.state}
+        newMinutes(hazard, (err,res) => {
+            this.refreshForm()
+        })
     }
 
     refreshForm() {
-        this.setState({})
-        this.render()
+        this.setState({
+            ...initialState
+        })
     }
 
     render() {
+        const {
+            date_time,
+            location,   
+            issues,
+        } = this.state
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="block">
@@ -44,16 +53,16 @@ class SafetyMeet extends React.Component {
                 <div>
                         <div>
                             <label className="label">Date:</label>
-                                <input className="input" type="date" name="date_time" onChange={this.handleChange} />
+                                <input className="input" type="date" name="date_time" value={date_time} onChange={this.handleChange} />
                         </div>  
                         <div>
                             <label className="label">Location:</label>
-                                <input className="input" type="text" name="location" onChange={this.handleChange} />
+                                <input className="input" type="text" name="location" value={location} onChange={this.handleChange} />
                         </div>
                         <div>
                             <label className="label">Minutes:</label>
                                 <div className="control">
-                                    <textarea className="textarea" type="text" name="issues" placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
+                                    <textarea className="textarea" type="text" name="issues" value={issues} placeholder="Attendees, Health & Safety concerns, training needs, incidents/accident trends, personal concerns " rows="10" onChange={this.handleChange}></textarea>
                                 </div>
                         </div>
                         <br />

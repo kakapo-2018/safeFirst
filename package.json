@@ -10,7 +10,10 @@
     "start": "node server/index",
     "test": "jest --watchAll --noStackTrace",
     "watch": "nodemon -e js,jsx -x npm test",
-    "knex": "knex"
+    "knex": "knex",
+    "h:rollback": "heroku run yarn knex migrate:rollback",
+    "h:migrate": "heroku run yarn knex migrate:latest",
+    "h:seed": "heroku run yarn knex seed:run"
   },
   "ava": {
     "require": "babel-register",
@@ -42,6 +45,7 @@
     "bcrypt": "^1.0.3",
     "body-parser": "^1.15.2",
     "bulma": "^0.7.1",
+    "chart.js": "^2.7.2",
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
@@ -56,6 +60,7 @@
     "passport": "^0.4.0",
     "pg": "^7.4.3",
     "react": "^15.5.4",
+    "react-chartkick": "^0.3.0",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
