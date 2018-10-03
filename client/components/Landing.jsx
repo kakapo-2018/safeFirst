@@ -10,8 +10,6 @@ class Landing extends React.Component {
                 "/images/fellingByPowerlines.jpg", 
                 "/images/Forestry.jpg",
                 "/images/planting.jpg",
-                "/images/pruner.jpg",
-
             ],
                      
         }
@@ -25,10 +23,14 @@ class Landing extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 7000
         }
         return (
+           
             <div>
+                 <div className="container">
+                    <h1 className="title is-1">safeFirst</h1>
+                </div>
                 <Slider {...settings}>
                     {this.state.images.map(image => {
                         return (
