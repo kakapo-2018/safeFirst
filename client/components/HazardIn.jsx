@@ -26,7 +26,6 @@ class HazardIn extends React.Component {
         newHazard(this.state, () => {
             this.props.history.push('/dashboard')
         })
-        // console.log(this.state)
     }
 
     refreshForm() {

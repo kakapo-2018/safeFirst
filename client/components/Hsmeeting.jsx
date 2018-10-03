@@ -24,7 +24,7 @@ class Hsmeeting extends React.Component {
             <SafetyMeet />
           </div>
           <div className="right">
-            <HazardIn />
+            <HazardIn {...this.props}/>
           </div>
         </div>
         <div>

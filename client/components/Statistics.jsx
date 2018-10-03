@@ -47,6 +47,7 @@ class Statistics extends React.Component {
             <br />
             <div>
                 <table>
+                    <tbody>
                     <tr>
                         <td className="title has-text-centered is-size-6">Incidents</td>
                         <td className="title has-text-centered is-size-6">Incident during Task</td>
@@ -54,19 +55,22 @@ class Statistics extends React.Component {
                     <tr>
                         <td><PieChart data={incidentData} width="350px" height="300px" /></td>
                         <td><PieChart data={taskData} width="350px" height="300px" /></td>
-                    </tr><br /><br />
-                </table>
+                    </tr>
+                    </tbody>
+                </table><br /><br />
                 <table>
+                  <tbody>
                     <tr>
 
-                        <td className="title has-text-centered is-size-6">Hazards Logged by Month for 2018</td>
-                        <br /><br />
+                        <td className="title has-text-centered is-size-6">Hazards Logged by Month for 2018<br /><br /></td>
+                        
                     </tr>
                     <tr>
                         <td>
                             <ColumnChart data={[["January", 20], ["February", 30], ["March", 35], ["April", 29], ["May", 42], ["June", 37], ["July", 49], ["August", 35], ["September", 42], ["October", 5]]} width="650px" />
                         </td>
                     </tr>
+                  </tbody>  
                 </table>
             </div>
         </div>

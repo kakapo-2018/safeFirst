@@ -10,6 +10,7 @@ class HazardForm extends React.Component {
             risk: '',
             control: '',
             daily: 'true'
+            
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -25,7 +26,6 @@ class HazardForm extends React.Component {
         newHazard(this.state, () => {
             this.props.history.push('/dashboard')
         })
-        // console.log(this.state)
     }
 
     refreshForm() {

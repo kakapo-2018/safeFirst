@@ -29,17 +29,13 @@ class IncidentForm extends React.Component {
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value})
     }
-
     
     handleSubmit(event) {
         event.preventDefault()
         const incident = {...this.state}
         newIncident(incident, (err, res) => {
-
-            console.log(res)
-            this.refreshForm()
+           this.refreshForm()
         })
-        console.log(this.state)
     }
 
     refreshForm(){
@@ -47,8 +43,6 @@ class IncidentForm extends React.Component {
             ...initialState       
         })
     }
-
-
 
     render() {
         const {

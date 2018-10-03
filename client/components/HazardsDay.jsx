@@ -30,14 +30,7 @@ export default class HazardsDay extends React.Component {
 
 
     render() {
-        console.log('render', this.state.hazards.length)
-        console.log()
-
         const today = moment(new Date()).format('dddd Do MMMM')
-
-        // const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-        // document.write(utc);
-
 
         return (
         <div>
@@ -55,12 +48,14 @@ export default class HazardsDay extends React.Component {
                                 </tr>
                             </thead>
                                 {
-                                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                                this.state.hazards.length > 0 &&this.state.hazards.map((hazard, j) => {
                                 return (
-                                <tbody>
+                                <tbody key={j}>
+                                  <tr>  
                                     <td>{hazard.hazard}</td>
                                     <td>{hazard.risk}</td>
                                     <td>{hazard.control}</td>
+                                  </tr>  
                                 </tbody>
                                 )    
                             })
