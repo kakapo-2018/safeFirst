@@ -1,5 +1,5 @@
-.body {
-    background-color: orange;
+    .body {
+    background-color: antiquewhite;
     font-family: 'Work Sans', sans-serif;
     }
     
@@ -22,10 +22,10 @@
         background-color: turquoise;
     }
     
-    /* .a.navbar-item.is-large.h1 {
+    .a.navbar-item.is-large.h1 {
         color:#4a00a7;
         font-family: 'Work Sans', sans-serif;
-    } */
+    }
      
     .hero.is-primary .title {
         color:#4a00a7;
@@ -46,7 +46,7 @@
     
     img {
         max-height: auto;
-       width: 20%;
+       width: 40%;
     } 
     
     

@@ -1,56 +1,41 @@
 import React from 'react'
 import Header from './Header'
-
-import { CSSTransitionGroup } from 'react-transition-group'
-import BackgroundImage from './BackgroundImage';
-
+import Slider from "react-slick";
 
 class Landing extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            images:[
+                "/images/fellingByPowerlines.jpg", 
+                "/images/Forestry.jpg",
+                "/images/planting.jpg",
+                "/images/pruner.jpg",
+
+            ],
+                     
+        }
     }       
 
-// const Landing = (props) => (
-//     <div>
-//         <h1>
-//             I am a landing page
-//         </h1>
-//     </div>
-    handleAdd() {
-        const newItems = this.state.items.concat([
-        prompt('image')
-        ]);
-        this.setState({image: changeImage});
-    }
-
-    handleRemove(i) {
-        let changeImage = this.state.items.slice();
-        newImage.splice(i, 1);
-        this.setState({image: changeImage});
-    }
-
-
     render() {
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        }
         return (
             <div>
-                <h1>
-                    I am a landing page
-                </h1>
-                <CSSTransitionGroup
-                    transitionName="background"
-                    transitionAppear={true}
-                    transitionAppearTimeout={3000}
-                    transitionEnterTimeout={3000}
-                    transitionLeaveTimeout={3000}
-                    >
-                    <BackgroundImage />
-                    transitionName = {{
-                        enter: 'enter',
-                        enterActive: 'EnterActive',
-                        leave: 'leave',
-                        leaveActive: 'leaveActive',
-                    }} 
-                </CSSTransitionGroup>
+                <Slider {...settings}>
+                    {this.state.images.map(image => {
+                        return (
+                            <img key={image} src={image}/>
+                        )
+                    })}
+                </Slider>
             </div>
         )
     }
