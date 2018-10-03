@@ -3,9 +3,9 @@
     font-family: 'Work Sans', sans-serif;
     }
     
-    .body-background-color {
+    /* .body-background-color {
         background-color: orange;
-    } 
+    }  */
     
     /* /* .section.app-container {
         background-color: turquoise;
@@ -44,11 +44,13 @@
         width: 400px;
     }
     
-    img {
-        max-height: auto;
-       width: 40%;
-    } 
+    .slide img {
+        /* max-height: auto; */
+       /* max-width: 60%; */
+       /* max-width: 80%; */
+       margin: 0 auto;
     
+    }
     
     
     /* .has-text-danger {
@@ -77,7 +79,7 @@
         padding: 35px;
         }
     
-    .background-appear {
+    /* .background-appear {
         opacity: 0.01;
         position: left;
         transform: translate(100%);
@@ -103,7 +105,7 @@
         opacity: 0.05;
         position: right;
         transform: translate(100%);
-    }
+    } */
     
     .dashboardcontainer {
         width: 100%;
