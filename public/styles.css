@@ -45,29 +45,8 @@
     }
     
     .slide img {
-        /* max-height: auto; */
-       /* max-width: 60%; */
-       /* max-width: 80%; */
        margin: 0 auto;
-    
     }
-    
-    
-.label   {
-
-}
-
-.input {
-
-}
-
-.Register    {
-
-}
-
-.animation  {
-    
-} */
 
 .navbarcolour {
     background-color: rgb(86, 170, 219);
@@ -92,8 +71,6 @@
 
 .dashboardcontainer {
     width: 100%;
-    /* height: 200px;
-    background: aqua; */
     margin: auto;
     padding: 10px;
     display: flex;

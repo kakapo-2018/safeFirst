@@ -123,7 +123,7 @@ class IncidentForm extends React.Component {
                                 <button className="button is-info" type="submit">Submit</button>
                             </div>
                             <div className="control">
-                                <button className="button is-danger" onClick={this.refreshForm}>Cancel</button>
+                                <button className="button is-danger" type="button" onClick={this.refreshForm}>Cancel</button>
                             </div>
                         </div>
                     </form>
