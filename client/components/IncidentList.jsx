@@ -28,9 +28,6 @@ export default class IncidentList extends React.Component {
     }
 
     render() {
-        console.log('render', this.state.incidents.length)
-        console.log()
-        
       return (
         <div>
             <div className="block">
@@ -54,10 +51,11 @@ export default class IncidentList extends React.Component {
                       <th>First aid</th>
                     </tr>
                 </thead>
-                    {this.state.incidents.length > 0 &&this.state.incidents.map((incident) => {
+                    {this.state.incidents.length > 0 &&this.state.incidents.map((incident, i) => {
                         return (
                            
-                                <tbody>
+                                <tbody key={i}>
+                                  <tr>   
                                     <td>{incident.person_involved}</td>
                                     <td>{incident.incident_type}</td>
                                     <td>{incident.date_time}</td>
@@ -67,6 +65,7 @@ export default class IncidentList extends React.Component {
                                     <td>{incident.other_incident}</td>
                                     <td>{incident.location}</td>
                                     <td>{incident.first_aid}</td>
+                                  </tr>   
                                 </tbody>
                             
                         )    

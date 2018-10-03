@@ -29,17 +29,13 @@ class IncidentForm extends React.Component {
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value})
     }
-
     
     handleSubmit(event) {
         event.preventDefault()
         const incident = {...this.state}
         newIncident(incident, (err, res) => {
-
-            console.log(res)
-            this.refreshForm()
+           this.refreshForm()
         })
-        console.log(this.state)
     }
 
     refreshForm(){
@@ -47,8 +43,6 @@ class IncidentForm extends React.Component {
             ...initialState       
         })
     }
-
-
 
     render() {
         const {
@@ -125,10 +119,10 @@ class IncidentForm extends React.Component {
                         </div>
                         <br />
                         <div className="field is-grouped">
-                            <div>
+                            <div className="control">
                                 <button className="button is-info" type="submit">Submit</button>
                             </div>
-                            <div>
+                            <div className="control">
                                 <button className="button is-danger" onClick={this.refreshForm}>Cancel</button>
                             </div>
                         </div>
@@ -141,4 +135,3 @@ class IncidentForm extends React.Component {
 
 export default IncidentForm
 
-                        

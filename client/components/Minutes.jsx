@@ -28,8 +28,6 @@ export default class Minutes extends React.Component {
     }
 
     render() {
-        console.log('render', this.state.minutes.length)
-        console.log()
         
       return (
         
@@ -48,15 +46,18 @@ export default class Minutes extends React.Component {
                       <th>Date</th>
                       <th>Location</th>
                       <th>Minutes</th>
-                                          </tr>
+                    </tr>
                 </thead>
-                    {this.state.minutes.length > 0 &&this.state.minutes.map((minute) => {
+                    {this.state.minutes.length > 0 &&this.state.minutes.map((minute, i) => {
                         return (
                            
-                                <tbody>
+                                <tbody key={i}>
+                                  <tr>   
                                     <td>{minute.date_time}</td>
                                     <td>{minute.location}</td>
                                     <td>{minute.issues}</td>
+                                  </tr>  
+
                                 </tbody>
                             
                         )    

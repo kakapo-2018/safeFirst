@@ -6,7 +6,6 @@ exports.seed = function(knex, Promise) {
         return knex('incidents').insert(
         [
           {
-            id: 1, 
             user_id: '4',
             person_involved: 'user6',
             incident_type: 'Near miss',
@@ -19,7 +18,6 @@ exports.seed = function(knex, Promise) {
             first_aid: 'false'
           },
           {
-            id: 2, 
             user_id: '5',
             person_involved: 'user5',
             incident_type: 'Accident',
@@ -32,7 +30,6 @@ exports.seed = function(knex, Promise) {
             first_aid: 'false'
           },
           {
-            id: 3, 
             user_id: '3',
             person_involved: 'user4',
             incident_type: 'Injury',
@@ -45,7 +42,6 @@ exports.seed = function(knex, Promise) {
             first_aid: 'true'
           },
           {
-            id: 4, 
             user_id: '3',
             person_involved: 'user3',
             incident_type: 'Near miss',
@@ -58,7 +54,6 @@ exports.seed = function(knex, Promise) {
             first_aid: 'false'
           },
           {
-            id: 5, 
             user_id: '2',
             person_involved: 'user2',
             incident_type: 'Accident',
@@ -71,7 +66,6 @@ exports.seed = function(knex, Promise) {
             first_aid: 'true'
           },
           {
-            id: 6, 
             user_id: '2',
             person_involved: 'user1',
             incident_type: 'Injury',

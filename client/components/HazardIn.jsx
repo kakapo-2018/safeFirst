@@ -7,10 +7,10 @@ class HazardIn extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            Hazard: '',
-            Risk: '',
-            Control: '',
-            Daily: 'false'
+            hazard: '',
+            risk: '',
+            control: '',
+            daily: 'false'
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -26,7 +26,6 @@ class HazardIn extends React.Component {
         newHazard(this.state, () => {
             this.props.history.push('/dashboard')
         })
-        // console.log(this.state)
     }
 
     refreshForm() {
@@ -47,15 +46,15 @@ class HazardIn extends React.Component {
             </div>
             <form onSubmit={this.handleSubmit}>
                 <label className="label">Hazard:
-                    <input className="input" type="text" name="Hazard" onChange={this.onSubmit}></input>
+                    <input className="input" type="text" name="hazard" onChange={this.onSubmit}></input>
                 </label>
                 <br></br>
                 <label className="label">Risk:
-                    <input className="input" type="text" name="Risk" onChange={this.onSubmit}></input>
+                    <input className="input" type="text" name="risk" onChange={this.onSubmit}></input>
                 </label>
                 <br></br>
                 <label className="label">Control:
-                    <input className="input" type="text" name="Control" onChange={this.onSubmit}></input>
+                    <input className="input" type="text" name="control" onChange={this.onSubmit}></input>
                 </label>
                 <br></br>
                 <div className="control">

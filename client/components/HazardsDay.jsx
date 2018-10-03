@@ -1,6 +1,7 @@
 import React from 'react'
 import { getHazards } from '../utils/apiclient.js'
 import moment from 'moment'
+import {Link} from 'react-router-dom'
 
 export default class HazardsDay extends React.Component {
     constructor(props) {
@@ -29,16 +30,10 @@ export default class HazardsDay extends React.Component {
 
 
     render() {
-        console.log('render', this.state.hazards.length)
-        console.log()
-
         const today = moment(new Date()).format('dddd Do MMMM')
 
-        // const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-        // document.write(utc);
-
-
         return (
+        <div>
         <div>        
         <div className="block">
             <h1 className="title">Hazards for  {today} </h1>
@@ -53,18 +48,24 @@ export default class HazardsDay extends React.Component {
                                 </tr>
                             </thead>
                                 {
-                                this.state.hazards.length > 0 &&this.state.hazards.map((hazard) => {
+                                this.state.hazards.length > 0 &&this.state.hazards.map((hazard, j) => {
                                 return (
-                                <tbody>
+                                <tbody key={j}>
+                                  <tr>  
                                     <td>{hazard.hazard}</td>
                                     <td>{hazard.risk}</td>
                                     <td>{hazard.control}</td>
+                                  </tr>  
                                 </tbody>
                                 )    
                             })
                          }
                         </table>
                     </div>
-                </div>
+                    <div className="control">
+                                <Link to="/dailymeeting" className="button is-info">Create a New Hazard</Link>
+                    </div>
+                 </div><br /><br />
+              </div>
             )}
         }
