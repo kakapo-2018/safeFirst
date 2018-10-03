@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
             daily: 'false',
           },
           {
-            hazard: 'Lose items on ground',
+            hazard: 'Lose items on the floor due to the kitchen being renovated',
             risk: 'Slipping or falling',
             control: 'Everyone is responsible to keep the floor tidy with no lose items floating aorund',
             daily: 'true',
