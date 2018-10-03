@@ -1,6 +1,7 @@
 import React from 'react'
 import { getHazards } from '../utils/apiclient.js'
 import moment from 'moment'
+import {Link} from 'react-router-dom'
 
 export default class HazardsDay extends React.Component {
     constructor(props) {
@@ -39,6 +40,7 @@ export default class HazardsDay extends React.Component {
 
 
         return (
+        <div>
         <div>        
         <div className="block">
             <h1 className="title">Hazards for  {today} </h1>
@@ -65,6 +67,10 @@ export default class HazardsDay extends React.Component {
                          }
                         </table>
                     </div>
-                </div>
+                    <div className="control">
+                                <Link to="/dailymeeting" className="button is-info">Create a New Hazard</Link>
+                    </div>
+                 </div><br /><br />
+              </div>
             )}
         }

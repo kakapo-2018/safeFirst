@@ -114,3 +114,7 @@ img {
 .welcome {
     display: inline-block;
 }
+
+.charts {
+    display: flex;
+}
